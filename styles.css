@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 30px 80px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.left {
+    width: 40%;
+}
+
+.right ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+}
+
+.right li {
+    display: inline;
+}
+
+.right a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    opacity: 80%;
+}
