@@ -10,19 +10,106 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="navbar">
-            <div class="left">
-                <span class="name">Sarah Olson</span>
+        <div class="container">
+            <div class="navbar">
+                <div class="left">
+                    <span class="name">Sarah Olson</span>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="right">
-                <ul>
-                    <li id="home"><a href="">Home</a></li>
-                    <li id="about"><a href="">About</a></li>
-                    <li id="projects"><a href="">Projects</a></li>
-                    <li id="contact"><a href="">Contact</a></li>
-                </ul>
+            <div id="home" class="intro">
+                <h1>Hi, I'm Sarah</h1>
+                <p>A self-taught front-end developer with a passion for transforming ideas into visually appealing and user-friendly websites.</p>
+                <button>Projects</button>
+            </div>
+            <h2 id="about">About Me</h2>
+            <div class="about">
+                <div class="text-container">
+                    <div class ="about-text">
+                        <p>Im a FrontEnd Web developer. My intro to coding began through platforms like FreeCodeCamp, where I studied countless hours to improve my skills.</p>
+                        <p>I hold three certificates from FreeCodeCamp. These include certifications in Responsive Web Design, JavaScript Algorithms and Data Structures, and Front End Development Libraries.</p>
+                        <p>My learning journey has been diverse, involving challenges on LeetCode, studying React, consulting the thorough documentation on MDN, and gaining practical insights from YouTube tutorials. GitHub is my virtual playground, showcasing my coding skills through personal projects and websites.</p>
+                        <p>I thrive on the excitement of problem-solving and the dynamic world of front-end development. Feel free to reach out to me anytime, let's connect!</p>
+                        <button>Contact Me</button>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="disabled-buttons">
+                        <button disabled="true">CSS</button>
+                        <button disabled="true">HTML</button>
+                        <button disabled="true">Javascript</button>
+                        <button disabled="true">React</button>
+                        <button disabled="true">Github</button>
+                        <button disabled="true">Responsive Design</button>
+                        <button disabled="true">SASS</button>
+                        <button disabled="true">BootStrap</button>
+                        <button disabled="true">jQuery</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Projects</h2>
+            <div class ="project-container" id="projects">
+                <div class="project">
+                    <img src="/randomquotegenerator.png" alt="Project 1">
+                    <div class="overlay">
+                        <div class="description">Description for Project 1</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="" alt="Project 2">
+                    <div class="overlay">
+                        <div class="description">Description for Project 2</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="" alt="Project 3">
+                    <div class="overlay">
+                        <div class="description">Description for Project 3</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="" alt="Project 4">
+                    <div class="overlay">
+                        <div class="description">Description for Project 4</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="" alt="Project 5">
+                    <div class="overlay">
+                        <div class="description">Description for Project 5</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="" alt="Project 6">
+                    <div class="overlay">
+                        <div class="descri  ption">Description for Project 6</div>
+                        <a href="" class="live-link" target="_blank">Live Link</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contact" id="contact">
+                <button style="margin-top: 20px;" id="downloadResume">Download Resume</button>
             </div>
         </div>
-        <img alt="background" src="cool-background.png">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
