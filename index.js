@@ -12,4 +12,13 @@ $(document).ready(function () {
         });
       }
     });
-  });
+
+    $('i').hover(
+      function () {
+          $(this).animate({ marginTop: '-10px' }, 200);
+      },
+      function () {
+          $(this).animate({ marginTop: '0px' }, 200);
+      }
+  );
+});

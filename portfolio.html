@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5276d236c8.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -20,14 +21,14 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div id="home" class="intro">
                 <h1>Hi, I'm Sarah</h1>
                 <p>A self-taught front-end developer with a passion for transforming ideas into visually appealing and user-friendly websites.</p>
-                <button>Projects</button>
+                <button><a href="#projects">Projects</a></button>
             </div>
             <h2 id="about">About Me</h2>
             <div class="about">
@@ -37,7 +38,7 @@
                         <p>I hold three certificates from FreeCodeCamp. These include certifications in Responsive Web Design, JavaScript Algorithms and Data Structures, and Front End Development Libraries.</p>
                         <p>My learning journey has been diverse, involving challenges on LeetCode, studying React, consulting the thorough documentation on MDN, and gaining practical insights from YouTube tutorials. GitHub is my virtual playground, showcasing my coding skills through personal projects and websites.</p>
                         <p>I thrive on the excitement of problem-solving and the dynamic world of front-end development. Feel free to reach out to me anytime, let's connect!</p>
-                        <button>Contact Me</button>
+                        <button><a href="#contact">Contact Me</a></button>
                     </div>
                 </div>
                 <div class="skills">
@@ -54,12 +55,12 @@
                     </div>
                 </div>
             </div>
-            <h2>Projects</h2>
-            <div class ="project-container" id="projects">
+            <h2 id="projects">Projects</h2>
+            <div class ="project-container">
                 <div class="project">
                     <img src="/randomquotegenerator.png" alt="Project 1">
                     <div class="overlay">
-                        <div class="description">Description for Project 1</div>
+                        <div class="description">Random Quote Generator With Path To Post Current Quote</div>
                         <a href="" class="live-link" target="_blank">Live Link</a>
                     </div>
                 </div>
@@ -105,9 +106,29 @@
                 </div>
 
             </div>
-            <div class="contact" id="contact">
-                <button style="margin-top: 20px;" id="downloadResume">Download Resume</button>
+            <h2 id="contact">Contact Me</h2>
+            <div class="contact">
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/sarah-olson-1b1b0b1b0/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></a>
+                    <a href="twitter.com" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #000000;"></i></a>
+                    <a href="github.com" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></a>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/myyqakje" method="POST">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Enter Your Message" required></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div> 
             </div>
+            <footer>	© Copyright 2023. Handcrafted by Sarah Olson</footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="index.js"></script>

@@ -1,3 +1,9 @@
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --tertiary-color: whitesmoke;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +25,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
     font-size: 1.3rem;
     font-weight: 400;
@@ -49,7 +55,7 @@ body {
 .right a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
 }
 
 .intro {
@@ -60,7 +66,7 @@ body {
     margin: 0 auto;
     text-align: center;
     padding-top: 20%;
-    padding-bottom: 15%;
+    margin-bottom: 20%;
 }
 
 h1 {
@@ -68,7 +74,7 @@ h1 {
 }
 
 button {
-    background-color: whitesmoke;
+    background-color: var(--tertiary-color);
     color: black;
     font-size: 20px;
     border-radius: 10px;
@@ -80,18 +86,27 @@ button {
     margin: 30px;
     display: inline-block;
 }
+button a {
+    text-decoration: none;
+    color: black;
+}
+button:hover {
+    cursor: pointer;
+}
 
 h2 {
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 7%;
 }
 
 .about {
     position: relative;
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 30px 30px 30px;
+    margin: 0% 10% 20% 10%;
+    justify-content: space-around;
+   
 }
 
 .text-container {
@@ -115,6 +130,10 @@ h2 {
     line-height: 1.4;
 }
 
+.about-text p:nth-last-of-type(1) {
+    padding-bottom: 10%;
+}
+
 .skills {
     max-width: 50%;
     display: flex;
@@ -129,30 +148,32 @@ h2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .disabled-buttons button {
     margin: 10px;
     border: none;
     width: auto;
+    cursor: not-allowed;
 }
 
 .project-container {
     max-width: 100%;
-    margin: auto;
+    margin: 0% 10% 20% 10%;
     height: auto;
     padding: 10px;
     display: grid;
     gap: 10px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    background-color: whitesmoke;
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
 }
 
 .project {
     position: relative;
     overflow: hidden;
-    background-color: whitesmoke;
 }
 
 .project img {
@@ -189,8 +210,83 @@ h2 {
 
 .live-link {
     text-decoration: none;
-    color: #fff;
-    background-color: #3498db;
+    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     padding: 8px 12px;
     border-radius: 5px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 30px 30px;
+    border-radius: 5px;
+    margin: 0% 10% 5% 10%;
+    background-color: var(--tertiary-color)
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+    height: auto;
+    margin: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid var(--tertiary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    resize: none;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  input:focus, textarea:focus {
+    border: 3px solid var(--secondary-color);
+    background-color: var(--tertiary-color);
+  }
+
+.contact-form button {
+    width: 100%;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.contact-form button:hover {
+    background-color: var(--tertiary-color);
+}
+
+footer {
+    text-align: center; 
+    font-size: 1rem;
+    padding: 10px;
 }
