@@ -13,3 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
       button.style.top = `${40 + y}%`; 
   });
 });
+
+//toggle dark/light mode
+const themeIcon = document.getElementById('theme-icon');
+const rootElement = document.documentElement;
+const navItems = document.querySelectorAll('.nav-item');
+const navText = document.querySelector('.navbar-text');
+const contactForm = document.querySelector('.contact-form');
+
+function toggleTheme() {
+  if (rootElement.getAttribute('data-bs-theme') === 'dark') {
+    rootElement.setAttribute('data-bs-theme', 'light'); 
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+    navItems.forEach(item => item.classList.remove('light-theme'));
+    navText.classList.remove('light-theme');
+    contactForm.classList.add('light-theme');
+  } else {
+    rootElement.setAttribute('data-bs-theme', 'dark');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+    navItems.forEach(item => item.classList.add('light-theme'));
+    navText.classList.add('light-theme');
+    contactForm.classList.remove('light-theme');
+  }
+}

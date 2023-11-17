@@ -1,9 +1,9 @@
 :root {
     --primary-color: white;
-    --secondary-color: black;
     --tertiary-color: #c078a2;
+    --secondary-color: black;
 }
-
+    
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +11,9 @@
 }
 
 body {
-    font-family: 'Nunito', sans-serif !important;
-    color: black;
+    font-family: 'Nunito', sans-serif;
     position: relative;
-    font-size: 20px !important;
-    background: linear-gradient(
-        to bottom right,    
-        white 5px,
-        #eeafd9 10%,
-        #c078a2 60%,
-        #a15f92 90%
-    ) !important;
+    font-size: 20px;
 }
 
 .nav-item {
@@ -29,16 +21,33 @@ body {
     position: relative;
 }
 
+.nav-link {
+    color: var(--tertiary-color);
+}
+
 .nav-item::after{
     content: '';
     position: absolute;
     width: 0px;
     height: 2px;
+    background-color: var(--secondary-color);
     left: 7px;
     bottom: 20%;
-    background-color: black;
     transition: all ease-in-out .3s;
 }
+
+.nav-item.light-theme::after {
+    background-color: var(--primary-color);
+} 
+
+.navbar-text {
+    color: black;
+}
+
+.navbar-text.light-theme {
+    color: white;
+}
+
 .nav-item:hover::after{
     width: 30px;
 }
@@ -54,10 +63,10 @@ body {
 }
 
 button {
-    background-color: var(--tertiary-color) !important;
-    border-radius: 10px !important;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
     padding: 10px;
-    border: 2px solid var(--secondary-color) !important;
+    border: 2px solid var(--secondary-color);
     width: 180px;
 }
 
@@ -65,9 +74,10 @@ button {
     margin: 30px;
     display: inline-block;
 }
+
 button a {
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
 }
 button:hover {
     cursor: pointer;
@@ -100,8 +110,8 @@ h2 {
     font-size: 16px;
     width: 100px;
     height: 100px;
-    border-radius: 50% !important;
-    border: none !important;
+    border-radius: 50%;
+    border: none;
     color: var(--secondary-color);
     animation: floatAnimation 4s ease-in-out infinite;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -209,12 +219,15 @@ h2 {
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 50%;
     height: auto;
     margin: auto;
     padding: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border-radius: 10px;
+}
+
+.contact-form.light-theme {
+    background-color: var(--primary-color);
 }
 
 input, textarea {
