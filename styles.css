@@ -1,6 +1,6 @@
 :root {
-    --primary-color: white;
-    --tertiary-color: #c078a2;
+    --primary-color: #D9CDBC;
+    --tertiary-color: #A1866C;
     --secondary-color: black;
 }
     
@@ -17,11 +17,15 @@ body {
 }
 
 .nav-item {
-    border:none;
+    border: none;
     position: relative;
 }
 
 .nav-link {
+    color: var(--primary-color);
+}
+
+.nav-link.theme {
     color: var(--tertiary-color);
 }
 
@@ -30,22 +34,25 @@ body {
     position: absolute;
     width: 0px;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     left: 7px;
     bottom: 20%;
     transition: all ease-in-out .3s;
 }
 
-.nav-item.light-theme::after {
-    background-color: var(--primary-color);
+.nav-item.theme::after {
+    background-color: var(--tertiary-color);
 } 
 
 .navbar-text {
-    color: black;
+    color: var(--tertiary-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Satisfy', sans-serif;
 }
 
-.navbar-text.light-theme {
-    color: white;
+.navbar-text.theme {
+    color: var(--primary-color);
 }
 
 .nav-item:hover::after{
@@ -62,31 +69,62 @@ body {
     padding-top: 300px;
 }
 
-button {
-    background-color: var(--tertiary-color);
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid var(--secondary-color);
-    width: 180px;
+.header-text h1 {
+    font-family: 'Satisfy', sans-serif;
 }
 
-.intro button {
-    margin: 30px;
-    display: inline-block;
-}
-
-button a {
-    text-decoration: none;
-    color: var(--secondary-color);
-}
-button:hover {
+.btn {
+    background-image: linear-gradient(to right, #b7a492, #A1866C);
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
     cursor: pointer;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: #212529;
+    border-radius: 4px;
+    z-index: -1;
+} 
+
+.btn.theme::before {
+    background-color: white;
+}
+
+.btn::after {
+    content: attr(data);
+    font-size: 20px;
+    background: linear-gradient(to left, #b7a492, #A1866C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    overflow: hidden;
 }
 
 h2 {
     text-align: center;
     padding-top: 100px;
     padding-bottom: 10px;
+    font-family: "Satisfy", Sans-seriff;
 }
 
 .about {
@@ -99,29 +137,36 @@ h2 {
     text-align: justify;
 }
 
-.disabled-buttons {
+.skills {
     position: relative;
     width: 560px;
     height: 520px;
+    align-items: center;
+    justify-content: center;
 }
 
-.disabled-buttons button {
+.skills .skill-bubble {
     position: absolute;
+    font-family: 'Satisfy', sans-serif;
     font-size: 16px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border: none;
+    box-shadow: none;
     color: var(--secondary-color);
     animation: floatAnimation 4s ease-in-out infinite;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background: radial-gradient(
         circle at 70% 30%,
-        white 5px,
-        #eeafd9 10%,
-        #c078a2 60%,
-        #a15f92 90%
+        #E4E4DE 5px,
+        #D9CDBC 10%,
+        #bca188 60%,
+        #7e6750 90%
     ) !important;
 }
 
@@ -137,13 +182,12 @@ h2 {
     }
 }
 
-.disabled-buttons button:hover {
+.skills .skill-bubble:hover {
     opacity: 0;
     z-index: 1;
 }
 
 .project-container {
-    background-color: var(--tertiary-color);
     border-radius: 5px;
     margin-bottom: 10%;
 }
@@ -156,8 +200,7 @@ h2 {
 .overlay {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 96.5%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
@@ -189,7 +232,6 @@ h2 {
 
 .contact {
     border-radius: 5px;
-    background-color: var(--tertiary-color);
     margin-bottom: 7%;
 }
 
@@ -198,7 +240,7 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     height: auto;
     padding: 20px;
     margin: auto;
@@ -210,7 +252,12 @@ h2 {
     vertical-align: center;
     margin-top: 0;
     transition: margin-top 0.2s ease-in-out;
-  }
+    color: var(--primary-color);
+}
+
+.fa-brands.theme {
+    color: var(--tertiary-color);
+}
 
 .fa-brands:hover {
     margin-top: -10px;
@@ -222,49 +269,34 @@ h2 {
     height: auto;
     margin: auto;
     padding: 10px;
-    background-color: var(--secondary-color);
     border-radius: 10px;
 }
 
-.contact-form.light-theme {
-    background-color: var(--primary-color);
+.contact-form.theme {
+    background-color: white;
 }
 
-input, textarea {
+.send-btn {
+    width: 100%; 
+    margin: 8px 0;
+}
+
+.contact-form input, 
+.contact-form textarea {
     width: 100%;
     padding: 15px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 3px solid var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
     border-radius: 4px;
     box-sizing: border-box;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     resize: none;
-  }
+}
 
-  textarea {
+textarea {
     height: 100px;
-  }
-
-  input:focus, textarea:focus {
-    border: 3px solid var(--secondary-color);
-    background-color: var(--tertiary-color);
-  }
-
-.contact-form button {
-    width: 100%;
-    background-color: var(--tertiary-color);
-    color: var(--secondary-color);
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-.contact-form button:hover {
-    background-color: var(--tertiary-color);
 }
 
 footer {

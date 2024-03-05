@@ -1,16 +1,16 @@
 
-//skills bubbles positioning  
+//skill bubbles positioning  
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".disabled-buttons button");
+  const skills = document.querySelectorAll(".skills .skill-bubble");
 
-  buttons.forEach((button, index) => {
-      const angle = (index / buttons.length) * 360; 
+  skills.forEach((skill, index) => {
+      const angle = (index / skills.length) * 360; 
       const radius = 30; 
       const x = radius * Math.cos((angle * Math.PI) / 180);
       const y = radius * Math.sin((angle * Math.PI) / 180);
 
-      button.style.left = `${40 + x}%`; 
-      button.style.top = `${40 + y}%`; 
+      skill.style.left = `${40 + x}%`; 
+      skill.style.top = `${40 + y}%`; 
   });
 });
 
@@ -19,22 +19,31 @@ const themeIcon = document.getElementById('theme-icon');
 const rootElement = document.documentElement;
 const navItems = document.querySelectorAll('.nav-item');
 const navText = document.querySelector('.navbar-text');
+const navLink = document.querySelectorAll('.nav-link');
 const contactForm = document.querySelector('.contact-form');
+const btnAfterElement = document.querySelectorAll('.btn');
+const socialIcons = document.querySelectorAll('.fa-brands');
 
 function toggleTheme() {
   if (rootElement.getAttribute('data-bs-theme') === 'dark') {
     rootElement.setAttribute('data-bs-theme', 'light'); 
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');
-    navItems.forEach(item => item.classList.remove('light-theme'));
-    navText.classList.remove('light-theme');
-    contactForm.classList.add('light-theme');
+    navItems.forEach(item => item.classList.remove('theme'));
+    navText.classList.remove('theme');
+    navLink.forEach(item => item.classList.add('theme'));
+    contactForm.classList.add('theme');
+    btnAfterElement.forEach(item => item.classList.add('theme'));
+    socialIcons.forEach(item => item.classList.add('theme'));
   } else {
     rootElement.setAttribute('data-bs-theme', 'dark');
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
-    navItems.forEach(item => item.classList.add('light-theme'));
-    navText.classList.add('light-theme');
-    contactForm.classList.remove('light-theme');
+    navItems.forEach(item => item.classList.add('theme'));
+    navText.classList.add('theme');
+    navLink.forEach(item => item.classList.remove('theme'));
+    contactForm.classList.remove('theme');
+    btnAfterElement.forEach(item => item.classList.remove('theme'));
+    socialIcons.forEach(item => item.classList.remove('theme'));
   }
 }
