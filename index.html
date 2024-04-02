@@ -27,12 +27,12 @@
 
                 <div class="container">
                   <a class="navbar-brand">
-                    <img src="images/pfp copy.jpg" alt="pfp" style="width:40px;" class="rounded-circle img-fluid">
+                    <img src="images/pfp copy.jpg" alt="pfp" class="rounded-circle img-fluid profile-icon">
                     <span class="navbar-text light-theme"> Sarah Olson</span>
                     <i id="theme-icon" class="fas fa-sun" onclick="toggleTheme()"></i>
                   </a>
                   
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <button class="navbar-toggler" aria-label="dark light mode" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   
@@ -65,7 +65,7 @@
                 <div class="header-text">
                     <h1 class="display-1">Hi, I'm Sarah</h1>
                     <p>A self-taught front-end developer with a passion for transforming ideas into visually appealing and user-friendly websites.</p>
-                    <button class='btn' data="Projects"><a href="#projects"></a></button>
+                    <button class='btn' title="projects" data="Projects"><a href="#projects" aria-label="link to projects section"></a></button>
                 </div>
             </div>
 
@@ -77,7 +77,7 @@
                             <p>I'm a front-end web developer that began my intro to coding through platforms like FreeCodeCamp, where I studied countless hours to improve my skills.</p>
                             <p>My learning journey has been diverse, including solving algorithms on LeetCode, studying React, consulting the thorough documentation on MDN, and gaining practical insights from YouTube tutorials. GitHub is my virtual playground, showcasing my coding skills through personal projects and websites.</p>
                             <p>I thrive on the excitement of problem-solving and the dynamic world of front-end development. Feel free to reach out to me anytime, let's connect!</p>
-                            <button class='btn' data="Contact Me"><a href="#contact"></a></button>
+                            <button class='btn' data="Contact Me" title="Contact"><a href="#contact" aria-label="Link to contact section"></a></button>
                         </div>
                         <div class="skills col-lg-5 col-md-5">
                             <div class="skill-bubble">CSS</div>
@@ -96,50 +96,68 @@
             <div class ="container-fluid project-container p-3">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                     <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/randomquotegenerator.png" alt="Project 1">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/randomquotegenerator.png" alt="Project 1">
                         <div class="overlay">
                             <div class="description">Random Quote Generator With Path To Post Current Quote</div>
-                            <a href="" class="live-link" target="_blank">Live Link</a>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/ProductLandingPage" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/playfulpathways.png" alt="Project 2">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/playfulpathways.png" alt="Project 2">
                         <div class="overlay">
                             <div class="description">Website for Playful Pathways Pediatric Therapy</div>
-                            <a href="https://github.com/sarahlynnx/Playful-Pathways" class="live-link" target="_blank">Live Link</a>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="https://github.com/sarahlynnx/Playful-Pathways" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/Playful-Pathways" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/macmiller.png" alt="Project 3">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/undercoverSnacks.png" alt="Project 6">
+                        <div class="overlay">
+                            <div class="description">Undercover Snacks Landing Page</div>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="https://sarahlynnx.github.io/ProductLandingPage/" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/ProductLandingPage" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project col">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/macmiller.png" alt="Project 3">
                         <div class="overlay">
                             <div class="description">Tribute Project for FreeCodeCamp</div>
-                            <a href="https://github.com/sarahlynnx/Mac-Miller-Tribute" class="live-link" target="_blank">Live Link</a>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="https://github.com/sarahlynnx/Mac-Miller-Tribute" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/Mac-Miller-Tribute" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
                         </div>
                     </div>
               
                     <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/webdevsurvey.png" alt="Project 4">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/webdevsurvey.png" alt="Project 4">
                         <div class="overlay">
                             <div class="description">Survey Project for FreeCodeCamp</div>
-                            <a href="https://github.com/sarahlynnx/Web-Development-Survey" class="live-link" target="_blank">Live Link</a>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="https://github.com/sarahlynnx/Web-Development-Survey" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/Web-Development-Survey" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/csstechnicaldoc.png" alt="Project 5">
+                        <img class="img-fluid project-img mx-auto d-block" src="images/csstechnicaldoc.png" alt="Project 5">
                         <div class="overlay">
                             <div class="description">Technical documentation Project for FreeCodeCamp</div>
-                            <a href="https://github.com/sarahlynnx/CSS-Technical-Documentation" class="live-link" target="_blank">Live Link</a>
-                        </div>
-                    </div>
-
-                    <div class="project col">
-                        <img class="img-fluid mx-auto d-block" src="images/webdevsurvey.png" alt="Project 6">
-                        <div class="overlay">
-                            <div class="description">Description for Project 6</div>
-                            <a href="" class="live-link" target="_blank">Live Link</a>
+                            <div class="d-flex flex-row gap-2">
+                                <a href="https://github.com/sarahlynnx/CSS-Technical-Documentation" class="live-link" target="_blank" rel="noopener">Live Link</a>
+                                <a href="https://github.com/sarahlynnx/CSS-Technical-Documentation" class="live-link" target="_blank" rel="noopener">Github Repository</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,9 +169,9 @@
                 <div class="row row-cols-1 row-cols-md-2 justify-content-around">
                     <div class="socials-container d-flex align-items-center">
                         <div class="col-sm-4 socials">
-                            <a href="https://www.linkedin.com/in/sarah-olson-50a1612a0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://twitter.com/SarahLynn9999" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://github.com/sarahlynnx" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sarah-olson-50a1612a0/" aria-label="link to linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://twitter.com/SarahLynn9999" aria-label="link to twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://github.com/sarahlynnx" aria-label="link to github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
 
@@ -168,9 +186,9 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" placeholder="Enter Your Message" required></textarea>
 
-                            <button class='btn send-btn' type="submit" data="Send"></button>
+                            <button class='btn send-btn' type="submit" data="Send" title="send email"></button>
                         </form>
-                        <div id="confirmation-message" style="display: none;">
+                        <div id="confirmation-message" style="display: none">
                             <p>Your message has been sent successfully!</p>
                         </div>
                     </div> 

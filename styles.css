@@ -16,6 +16,10 @@ body {
     font-size: 20px;
 }
 
+.profile-icon {
+    width: 40px;
+}
+
 .nav-item {
     border: none;
     position: relative;
@@ -197,6 +201,10 @@ h2 {
     overflow: hidden;
 }
 
+.project-img {
+    min-height: 245px;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -225,7 +233,7 @@ h2 {
 .live-link {
     text-decoration: none;
     color: var(--secondary-color);
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     padding: 8px 12px;
     border-radius: 5px;
 }
