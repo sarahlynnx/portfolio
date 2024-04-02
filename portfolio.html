@@ -1,28 +1,210 @@
-<!DOCTYPE html />
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
     <head>
         <title>Personal Portfolio</title>
-        <link rel="stylesheet" href="styles.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5276d236c8.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+                emailjs.init("qahJ_DK94uJHlqiiB");
+        </script>
     </head>
-    <body>
-        <div class="navbar">
-            <div class="left">
-                <span class="name">Sarah Olson</span>
+
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+        <div>
+
+            <nav class="navbar navbar-expand-sm fixed-top custom-nav">
+
+                <div class="container">
+                  <a class="navbar-brand">
+                    <img src="/images/pfp copy.jpg" alt="pfp" style="width:40px;" class="rounded-circle img-fluid">
+                    <span class="navbar-text light-theme"> Sarah Olson</span>
+                    <i id="theme-icon" class="fas fa-sun" onclick="toggleTheme()"></i>
+                  </a>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                  
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item light-theme">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                    
+                        <li class="nav-item light-theme">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                      
+                        <li class="nav-item light-theme">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                      
+                        <li class="nav-item light-theme">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>   
+                      
+                    </ul>
+                  </div>
+                 </div>
+
+              </nav>
+            <div id="home" class="container header">
+                <div class="header-text">
+                    <h1 class="display-1">Hi, I'm Sarah</h1>
+                    <p>A self-taught front-end developer with a passion for transforming ideas into visually appealing and user-friendly websites.</p>
+                    <button class='btn' data="Projects"><a href="#projects"></a></button>
+                </div>
             </div>
-            <div class="right">
-                <ul>
-                    <li id="home"><a href="">Home</a></li>
-                    <li id="about"><a href="">About</a></li>
-                    <li id="projects"><a href="">Projects</a></li>
-                    <li id="contact"><a href="">Contact</a></li>
-                </ul>
+
+
+            <h2 class="display-5" id="about">About Me</h2>
+            <div class="container">
+                <div class="about row row-cols-1 row-cols-md-2 justify-content-between gx-5">
+                        <div class ="about-text col-lg-6 col-md-7 p-4">
+                            <p>I'm a front-end web developer that began my intro to coding through platforms like FreeCodeCamp, where I studied countless hours to improve my skills.</p>
+                            <p>My learning journey has been diverse, including solving algorithms on LeetCode, studying React, consulting the thorough documentation on MDN, and gaining practical insights from YouTube tutorials. GitHub is my virtual playground, showcasing my coding skills through personal projects and websites.</p>
+                            <p>I thrive on the excitement of problem-solving and the dynamic world of front-end development. Feel free to reach out to me anytime, let's connect!</p>
+                            <button class='btn' data="Contact Me"><a href="#contact"></a></button>
+                        </div>
+                        <div class="skills col-lg-5 col-md-5">
+                            <div class="skill-bubble">CSS</div>
+                            <div class="skill-bubble">HTML</div>
+                            <div class="skill-bubble">Javascript</div>
+                            <div class="skill-bubble">React</div>
+                            <div class="skill-bubble">Github</div>
+                            <div class="skill-bubble">Rest APIs</div>
+                            <div class="skill-bubble">Bootstrap</div>
+                            <div class="skill-bubble">TypeScript</div>
+                        </div>
+                </div>  
             </div>
+            
+            <h2 class="display-5" id="projects">Projects</h2>
+            <div class ="container-fluid project-container p-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/randomquotegenerator.png" alt="Project 1">
+                        <div class="overlay">
+                            <div class="description">Random Quote Generator With Path To Post Current Quote</div>
+                            <a href="" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/playfulpathways.png" alt="Project 2">
+                        <div class="overlay">
+                            <div class="description">Website for Playful Pathways Pediatric Therapy</div>
+                            <a href="https://github.com/sarahlynnx/Playful-Pathways" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/macmiller.png" alt="Project 3">
+                        <div class="overlay">
+                            <div class="description">Tribute Project for FreeCodeCamp</div>
+                            <a href="https://github.com/sarahlynnx/Mac-Miller-Tribute" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+              
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/webdevsurvey.png" alt="Project 4">
+                        <div class="overlay">
+                            <div class="description">Survey Project for FreeCodeCamp</div>
+                            <a href="https://github.com/sarahlynnx/Web-Development-Survey" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/csstechnicaldoc.png" alt="Project 5">
+                        <div class="overlay">
+                            <div class="description">Technical documentation Project for FreeCodeCamp</div>
+                            <a href="https://github.com/sarahlynnx/CSS-Technical-Documentation" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+
+                    <div class="project col">
+                        <img class="img-fluid mx-auto d-block" src="/images/webdevsurvey.png" alt="Project 6">
+                        <div class="overlay">
+                            <div class="description">Description for Project 6</div>
+                            <a href="" class="live-link" target="_blank">Live Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="display-5" id="contact">Contact Me</h2>
+            <div class="container contact p-5">
+
+                <div class="row row-cols-1 row-cols-md-2 justify-content-around">
+                    <div class="socials-container d-flex align-items-center">
+                        <div class="col-sm-4 socials">
+                            <a href="https://www.linkedin.com/in/sarah-olson-50a1612a0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://twitter.com/SarahLynn9999" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://github.com/sarahlynnx" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form col-sm-7">
+                        <form id="contact-form">
+                            <label for="name">Name</label>
+                            <input type="text" name="contact_number" id="name" autocomplete="given-name" placeholder="Enter Your Name" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter Your Email" required>
+
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Enter Your Message" required></textarea>
+
+                            <button class='btn send-btn' type="submit" data="Send"></button>
+                        </form>
+                        <div id="confirmation-message" style="display: none;">
+                            <p>Your message has been sent successfully!</p>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+            <footer>	© Copyright 2024. Handcrafted by Sarah Olson</footer>
         </div>
-        <img alt="background" src="cool-background.png">
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+              event.preventDefault();
+        
+              // Get form data
+              var templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+              }
+        
+              // Send email
+              emailjs.send('service_nckvn8j', 'template_z31ouch', templateParams)
+                .then(function(response) {
+                  console.log('Email sent successfully:', response);
+
+                  document.getElementById('confirmation-message').style.display = 'block';
+
+                  document.getElementById('contact-form').reset();
+                }, function(error) {
+                  console.log('Failed to send email:', error);
+                });
+            });
+          </script>
     </body>
 </html>
