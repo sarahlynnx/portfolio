@@ -30,7 +30,7 @@ function toggleTheme() {
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');
     navItems.forEach(item => item.classList.remove('theme'));
-    navText.classList.remove('theme');
+    navText.classList.add('theme');
     navLink.forEach(item => item.classList.add('theme'));
     contactForm.classList.add('theme');
     btnAfterElement.forEach(item => item.classList.add('theme'));
@@ -40,7 +40,7 @@ function toggleTheme() {
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
     navItems.forEach(item => item.classList.add('theme'));
-    navText.classList.add('theme');
+    navText.classList.remove('theme');
     navLink.forEach(item => item.classList.remove('theme'));
     contactForm.classList.remove('theme');
     btnAfterElement.forEach(item => item.classList.remove('theme'));
