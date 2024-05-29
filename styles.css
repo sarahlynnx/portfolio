@@ -261,20 +261,19 @@ h2 {
     margin: auto;
 }
 
-.fa-brands {
+.social-icons {
     font-size: 2em;
     line-height: 1.5em;
-    vertical-align: center;
     margin-top: 0;
     transition: margin-top 0.2s ease-in-out;
     color: var(--primary-color);
 }
 
-.fa-brands.theme {
+.social-icons.theme {
     color: var(--tertiary-color);
 }
 
-.fa-brands:hover {
+.social-icons:hover {
     margin-top: -10px;
 }
 

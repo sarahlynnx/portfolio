@@ -22,7 +22,7 @@ const navText = document.querySelector('.navbar-text');
 const navLink = document.querySelectorAll('.nav-link');
 const contactForm = document.querySelector('.contact-form');
 const btnAfterElement = document.querySelectorAll('.btn');
-const socialIcons = document.querySelectorAll('.fa-brands');
+const socialIcons = document.querySelectorAll('.social-icons');
 
 function toggleTheme() {
   if (rootElement.getAttribute('data-bs-theme') === 'dark') {
