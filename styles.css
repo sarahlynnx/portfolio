@@ -63,14 +63,16 @@ body {
     width: 30px;
 }
 
+.header-container {
+    margin: 250px auto 200px auto;
+}
+
 .header-text {
     width: 80%;
     max-width: 810px;
     height: auto;
     margin: auto;
-    margin-bottom: 20%;
     text-align: center;
-    padding-top: 300px;
 }
 
 .header-text h1 {
@@ -126,15 +128,18 @@ body {
 
 h2 {
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 50px;
     font-family: "Satisfy", Sans-seriff;
+}
+
+.about-container {
+    margin: auto auto 200px auto;
 }
 
 .about {
     text-align: justify;
     position: relative;
-    margin-bottom: 10%;
 }
 
 .skills {
@@ -197,7 +202,7 @@ h2 {
 
 .project-container {
     border-radius: 5px;
-    margin-bottom: 10%;
+    margin: auto auto 200px auto;
 }
 
 .project {
@@ -245,7 +250,7 @@ h2 {
     border-radius: 5px;
 }
 
-.contact {
+.contact-container {
     border-radius: 5px;
     margin-bottom: 7%;
 }
