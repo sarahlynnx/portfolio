@@ -13,11 +13,25 @@
 body {
     font-family: 'Nunito', sans-serif;
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
 }
 
 .profile-icon {
     width: 40px;
+}
+
+.navbar {
+    background-color: #212529;
+}
+
+.navbar.theme {
+    background-color: #fff;
 }
 
 .nav-item {
@@ -63,21 +77,25 @@ body {
     width: 30px;
 }
 
-.header-container {
-    margin: 250px auto 200px auto;
+/* HOME */
+
+.intro-container {
+    margin: 250px auto 250px auto;
 }
 
-.header-text {
+.intro-text {
     width: 80%;
-    max-width: 810px;
+    max-width: 890px;
     height: auto;
-    margin: auto;
+    margin: auto auto 30px auto;
     text-align: center;
 }
 
-.header-text h1 {
+.intro-text h1 {
     font-family: 'Satisfy', sans-serif;
 }
+
+/* Buttons */
 
 .btn {
     background-image: linear-gradient(to right, #b7a492, #A1866C);
@@ -116,6 +134,11 @@ body {
     color: transparent;
 }
 
+.btn.theme::after {
+    background-color: unset;
+    color: black;
+}
+
 .btn a {
     position: absolute;
     top: 0;
@@ -126,10 +149,13 @@ body {
     overflow: hidden;
 }
 
+/* ABOUT */
+
+
 h2 {
     text-align: center;
     margin-bottom: 10px;
-    padding-top: 50px;
+    padding: 100px 0 50px 0;
     font-family: "Satisfy", Sans-seriff;
 }
 
@@ -138,67 +164,58 @@ h2 {
 }
 
 .about {
-    text-align: justify;
+    text-align: left;
     position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        text-align: justify;
+    }
+}
+
+/* SKILLS */
+
+.skills-container {
+    margin: auto auto 200px auto;
+    max-width: 760px;
 }
 
 .skills {
-    position: relative;
-    width: 560px;
-    height: 520px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-@media screen and (min-width: 978px) and (max-width: 1200px) {
-    .skills {
-        width: 490px;
-        height: 500px;
-    }
-}
-
-.skills .skill-bubble {
-    position: absolute;
-    font-family: 'Satisfy', sans-serif;
-    font-size: 16px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: none;
-    color: var(--secondary-color);
-    animation: floatAnimation 4s ease-in-out infinite;
-    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: radial-gradient(
-        circle at 70% 30%,
-        #E4E4DE 5px,
-        #D9CDBC 10%,
-        #bca188 60%,
-        #7e6750 90%
-    ) !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
 }
 
-@keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.skills .skill-bubble:hover {
+.skill-bubble {
     opacity: 0;
-    z-index: 1;
+    padding: 10px 20px;
+    color: var(--primary-color);
 }
+
+.skill-bubble.theme {
+    color: var(--secondary-color);
+}
+
+.skill-bubble.left {
+    transform: translateX(-100%);
+    transition: all 3s ease;
+}
+
+.skill-bubble.right {
+    transform: translateX(100%);
+    transition: all 3s ease;
+}
+
+.skill-bubble.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* PROJECTS */
 
 .project-container {
     border-radius: 5px;
@@ -249,6 +266,8 @@ h2 {
     padding: 8px 12px;
     border-radius: 5px;
 }
+
+/* CONTACT */
 
 .contact-container {
     border-radius: 5px;
@@ -321,6 +340,8 @@ h2 {
 textarea {
     height: 100px;
 }
+
+/* FOOTER */
 
 footer {
     text-align: center; 

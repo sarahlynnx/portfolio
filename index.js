@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //toggle dark/light mode
 const themeIcon = document.getElementById('theme-icon');
 const rootElement = document.documentElement;
+const navBar = document.querySelector('.navbar');
 const navItems = document.querySelectorAll('.nav-item');
 const navText = document.querySelector('.navbar-text');
 const navLink = document.querySelectorAll('.nav-link');
 const contactForm = document.querySelector('.contact-form');
 const btnAfterElement = document.querySelectorAll('.btn');
 const socialIcons = document.querySelectorAll('.social-icons');
+const skillText = document.querySelectorAll('.skill-bubble');
 
 function toggleTheme() {
   if (rootElement.getAttribute('data-bs-theme') === 'dark') {
@@ -35,6 +37,9 @@ function toggleTheme() {
     contactForm.classList.add('theme');
     btnAfterElement.forEach(item => item.classList.add('theme'));
     socialIcons.forEach(item => item.classList.add('theme'));
+    skillText.forEach(item => item.classList.add('theme'));
+    navBar.classList.add('theme');
+
   } else {
     rootElement.setAttribute('data-bs-theme', 'dark');
     themeIcon.classList.remove('fa-moon');
@@ -45,6 +50,9 @@ function toggleTheme() {
     contactForm.classList.remove('theme');
     btnAfterElement.forEach(item => item.classList.remove('theme'));
     socialIcons.forEach(item => item.classList.remove('theme'));
+    skillText.forEach(item => item.classList.remove('theme'));
+    navBar.classList.remove('theme');
+
   }
 }
 

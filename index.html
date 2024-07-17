@@ -74,6 +74,10 @@
               </li>
 
               <li class="nav-item light-theme">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+
+              <li class="nav-item light-theme">
                 <a class="nav-link" href="#projects">Projects</a>
               </li>
 
@@ -84,13 +88,13 @@
           </div>
         </div>
       </nav>
-      <div id="home" class="container header-container">
-        <div class="header-text">
+      <div id="home" class="container intro-container">
+        <div class="intro-text">
           <h1 class="display-1">Hi, I'm Sarah</h1>
-          <p>
-            A self-taught web developer with a passion for transforming ideas
-            into visually appealing, responsive and user-friendly designs that
-            drive engagement and meet project objectives.
+          <p class="pb-3">
+            A highly proactive software developer passionate about transforming
+            ideas into visually stunning, responsive, and user-friendly designs
+            that captivate audiences and achieve project goals.
           </p>
           <button class="btn" title="projects" data="Projects">
             <a href="#projects" aria-label="link to projects section"></a>
@@ -98,49 +102,58 @@
         </div>
       </div>
 
-      <h2 class="display-5" id="about">About Me</h2>
       <div class="container about-container">
-        <div
-          class="about row row-cols-1 row-cols-md-2 justify-content-between align-items-center gx-5"
-        >
-          <div class="about-text col-lg-6 col-md-12 p-4">
-            <div class="pb-2">
-              With a strong foundation in web development technologies, I excel
-              in delivering high-quality, data-driven solutions that enhance
-              user experiences. My expertise lies in creating dynamic web
-              applications using a variety of tools and frameworks. My projects
-              showcase my ability to design clean, user-friendly UIs with clear
-              CTA's while using RESTful APIs to enhance functionality. I have
-              demonstrated consistent success in applying responsive design
-              techniques to ensure seamless experiences across various devices.
-              Moreover, my familiarity with testing and debugging tools like
-              Chrome DevTools, Postman and version control systems like Git and
-              GitHub emphasizes my commitment to delivering error-free
-              solutions. I'm passionate about pushing the boundaries of web
-              development, learning new technologies, and delivering impactful
-              solutions that resonate with users. I am excited to contribute my
-              skills and expertise to innovative projects and collaborate with
-              like-minded professionals in the dynamic field of web development.
-            </div>
-            <button class="btn" data="Contact Me" title="Contact">
-              <a href="#contact" aria-label="Link to contact section"></a>
-            </button>
-          </div>
-          <div class="skills col-lg-5 col-md-12">
-            <div class="skill-bubble">CSS</div>
-            <div class="skill-bubble">HTML</div>
-            <div class="skill-bubble">Javascript</div>
-            <div class="skill-bubble">React</div>
-            <div class="skill-bubble">Github</div>
-            <div class="skill-bubble">RESTful APIs</div>
-            <div class="skill-bubble">Bootstrap</div>
-            <div class="skill-bubble">TypeScript</div>
-          </div>
+        <h2 class="display-5" id="about">About Me</h2>
+        <div class="about pb-4">
+          With a strong foundation in web development technologies, I excel in
+          delivering high-quality, data-driven solutions that enhance user
+          experiences. My expertise lies in creating dynamic web applications
+          using a variety of tools and frameworks. My projects showcase my
+          ability to design clean, user-friendly UIs with clear CTA's while
+          using RESTful APIs to enhance functionality. I have demonstrated
+          consistent success in applying responsive design techniques to ensure
+          seamless experiences across various devices. Moreover, my familiarity
+          with testing and debugging tools like Chrome DevTools, Postman and
+          version control systems like Git and GitHub emphasizes my commitment
+          to delivering error-free solutions. I'm passionate about pushing the
+          boundaries of web development, learning new technologies, and
+          delivering impactful solutions that resonate with users. I am excited
+          to contribute my skills and expertise to innovative projects and
+          collaborate with like-minded professionals in the dynamic field of web
+          development.
+        </div>
+        <div class="d-flex">
+          <button class="btn m-auto" data="Contact Me" title="Contact">
+            <a href="#contact" aria-label="Link to contact section"></a>
+          </button>
+        </div>
+      </div>
+      <div class="container skills-container">
+        <h2 class="display-5" id="skills">Skills</h2>
+        <div id="skill-section" class="skills">
+          <div class="skill-bubble left">CSS</div>
+          <div class="skill-bubble right">HTML</div>
+          <div class="skill-bubble left">Javascript</div>
+          <div class="skill-bubble right">Git</div>
+          <div class="skill-bubble left">GitHub</div>
+          <div class="skill-bubble right">Docker</div>
+          <div class="skill-bubble left">MongoDB</div>
+          <div class="skill-bubble right">SQL/NoSQL</div>
+          <div class="skill-bubble left">AWS</div>
+          <div class="skill-bubble right">jQuery</div>
+          <div class="skill-bubble left">React</div>
+          <div class="skill-bubble right">Express.js</div>
+          <div class="skill-bubble left">RESTful APIs</div>
+          <div class="skill-bubble right">Node.js</div>
+          <div class="skill-bubble left">Next.js</div>
+          <div class="skill-bubble right">TypeScript</div>
+          <div class="skill-bubble left">Bootstrap</div>
         </div>
       </div>
 
-      <h2 class="display-5" id="projects">Projects</h2>
       <div class="container-fluid project-container p-3">
+        <h2 class="display-5" id="projects">Projects</h2>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 m-auto">
           <div class="project col">
             <img
@@ -323,7 +336,7 @@
       </div>
 
       <h2 class="display-5" id="contact">Contact Me</h2>
-      <div class="container contact-container p-5">
+      <div class="container contact-container">
         <div class="row row-cols-1 row-cols-md-2 justify-content-around">
           <div class="socials-container d-flex align-items-center">
             <div class="col-sm-5 socials">
@@ -394,15 +407,55 @@
           </div>
         </div>
       </div>
-      <footer>©2024. Created by Sarah Olson</footer>
+      <footer>©2024 Sarah Olson</footer>
     </div>
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
+      // SKILLS
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const skillsSection = document.getElementById("skill-section");
+        const skills = document.querySelectorAll(".skill-bubble");
+        const options = {
+          threshold: 0.1,
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              skills.forEach((skill) => skill.classList.add("visible"));
+            } else {
+              skills.forEach((skill) => skill.classList.remove("visible"));
+            }
+          });
+        }, options);
+        observer.observe(skillsSection);
+      });
+
+      // NAVBAR - Closes the navbar menu when a nav item is clicked
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+
+        navbarLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth < 576) {
+              const collapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false,
+              });
+              collapse.hide();
+            }
+          });
+        });
+      });
+
+      // EMAIL
+
       document
         .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
+        .addEventListener("submit", (event) => {
           event.preventDefault();
 
           // Get form data
