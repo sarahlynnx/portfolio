@@ -1,20 +1,4 @@
-
-//skill bubbles positioning  
-document.addEventListener("DOMContentLoaded", function () {
-  const skills = document.querySelectorAll(".skills .skill-bubble");
-
-  skills.forEach((skill, index) => {
-    const angle = (index / skills.length) * 360;
-    const radius = 30;
-    const x = radius * Math.cos((angle * Math.PI) / 180);
-    const y = radius * Math.sin((angle * Math.PI) / 180);
-
-    skill.style.left = `${40 + x}%`;
-    skill.style.top = `${40 + y}%`;
-  });
-});
-
-//toggle dark/light mode
+// Toggle Dark/Light Theme
 const themeIcon = document.getElementById('theme-icon');
 const rootElement = document.documentElement;
 const navBar = document.querySelector('.navbar');
@@ -26,7 +10,7 @@ const btnAfterElement = document.querySelectorAll('.btn');
 const socialIcons = document.querySelectorAll('.social-icons');
 const skillText = document.querySelectorAll('.skill-bubble');
 
-function toggleTheme() {
+const toggleTheme = () => {
   if (rootElement.getAttribute('data-bs-theme') === 'dark') {
     rootElement.setAttribute('data-bs-theme', 'light');
     themeIcon.classList.remove('fa-sun');
@@ -56,7 +40,7 @@ function toggleTheme() {
   }
 }
 
-function removeHash() {
+const removeHash = () => {
   history.pushState(
     "",
     document.title,
@@ -64,3 +48,80 @@ function removeHash() {
   );
   window.scrollTo(0, 0);
 }
+
+// SKILLS
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.getElementById("skill-section");
+  const skills = document.querySelectorAll(".skill-bubble");
+  const options = {
+    threshold: 0.1,
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        skills.forEach((skill) => skill.classList.add("visible"));
+      } else {
+        skills.forEach((skill) => skill.classList.remove("visible"));
+      }
+    });
+  }, options);
+  observer.observe(skillsSection);
+});
+
+// NAVBAR - Closes the navbar menu when a nav item is clicked
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 576) {
+        const collapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false,
+        });
+        collapse.hide();
+      }
+    });
+  });
+});
+
+// EMAIL
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Get form data
+    var templateParams = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    // Send email
+    emailjs
+      .send("service_nckvn8j", "template_z31ouch", templateParams)
+      .then(
+        function (response) {
+          console.log("Email sent successfully:", response);
+
+          document.getElementById("confirmation-message").style.display =
+            "block";
+
+          document.getElementById("contact-form").reset();
+        },
+        function (error) {
+          console.log("Failed to send email:", error);
+        }
+      );
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
+  if (tooltipTriggerEl) {
+    var tooltip = new bootstrap.Tooltip(tooltipTriggerEl);
+  }
+});

@@ -301,10 +301,6 @@ h2 {
     margin-top: -10px;
 }
 
-.download:hover {
-    content: 'Check out my resume!';
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
