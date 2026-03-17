@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
+/* ─── Design tokens ─────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ground: #0d0c0b;
+  --color-surface: #161412;
+  --color-surface-2: #1e1b18;
+  --color-text-primary: #f0ebe1;
+  --color-text-muted: #9a8e82;
+  --color-amber: #c9a96e;
+  --color-amber-dim: rgba(201, 169, 110, 0.15);
+  --color-amber-glow: rgba(201, 169, 110, 0.07);
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base reset ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--color-ground);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-ground);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Container utility ──────────────────────────── */
+.container-wide {
+  width: 100%;
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 640px) {
+  .container-wide {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ─── Section spacing ────────────────────────────── */
+.section-padding {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* ─── Custom scrollbar ───────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ground);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-amber);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e0c088;
+}
+
+/* ─── Selection ──────────────────────────────────── */
+::selection {
+  background: var(--color-amber);
+  color: var(--color-ground);
+}
+
+/* ─── Scroll offset for fixed nav ───────────────── */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ─── Nav responsive ─────────────────────────────── */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+/* ─── Skills grid responsive ─────────────────────── */
+@media (max-width: 600px) {
+  .skills-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Pulse animation for availability dot ───────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
