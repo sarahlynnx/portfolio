@@ -1,13 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { charReveal, staggerContainer, fadeUp } from "@/lib/motion";
-
-const NAME = "Sarah Olson";
 
 export function Hero() {
-  const chars = NAME.split("");
-
   return (
     <section
       id="hero"
@@ -21,7 +16,6 @@ export function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Ambient background glow */}
       <div
         style={{
           pointerEvents: "none",
@@ -32,7 +26,6 @@ export function Hero() {
         }}
       />
 
-      {/* Subtle grid lines */}
       <div
         style={{
           pointerEvents: "none",
@@ -45,15 +38,28 @@ export function Hero() {
         }}
       />
 
-      <div className="container-wide" style={{ position: "relative", zIndex: 10 }}>
-        {/* Top label */}
+      <div
+        className="container-wide"
+        style={{ position: "relative", zIndex: 10 }}
+      >
         <motion.div
-          style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "2.5rem" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            marginBottom: "2.5rem",
+          }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div style={{ width: "32px", height: "1px", background: "var(--color-amber)" }} />
+          <div
+            style={{
+              width: "32px",
+              height: "1px",
+              background: "var(--color-amber)",
+            }}
+          />
           <span
             style={{
               fontFamily: "var(--font-mono)",
@@ -67,43 +73,28 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Name — character-by-character reveal */}
-        <div style={{ overflow: "hidden", marginBottom: "1.5rem", perspective: "800px" }}>
-          <motion.h1
-            style={{
-              fontFamily: "var(--font-serif)",
-              color: "var(--color-text-primary)",
-              fontSize: "clamp(3.5rem, 10vw, 8.5rem)",
-              fontWeight: 900,
-              lineHeight: 1,
-              letterSpacing: "-0.02em",
-            }}
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            {chars.map((char, i) => (
-              <motion.span
-                key={i}
-                style={{
-                  display: "inline-block",
-                  ...(char === " " ? { width: "0.3em" } : {}),
-                }}
-                variants={charReveal}
-                transition={{ delay: 0.4 + i * 0.04 }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.h1>
-        </div>
+        <motion.h1
+          style={{
+            fontFamily: "var(--font-serif)",
+            color: "var(--color-text-primary)",
+            fontSize: "clamp(3.5rem, 10vw, 8.5rem)",
+            fontWeight: 900,
+            lineHeight: 1,
+            letterSpacing: "-0.02em",
+            marginBottom: "1.5rem",
+          }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          Sarah Olson
+        </motion.h1>
 
-        {/* Tagline */}
         <motion.div
           style={{ overflow: "hidden", marginBottom: "2.5rem" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
+          transition={{ delay: 0.65, duration: 0.5 }}
         >
           <p
             style={{
@@ -113,8 +104,8 @@ export function Hero() {
               maxWidth: "480px",
             }}
           >
-            Self-taught engineer building production-grade web and mobile applications.
-            Founder of{" "}
+            Self-taught engineer building production-grade web and mobile
+            applications. Founder of{" "}
             <a
               href="https://lynnx.dev"
               target="_blank"
@@ -127,12 +118,16 @@ export function Hero() {
           </p>
         </motion.div>
 
-        {/* CTAs */}
         <motion.div
-          style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginBottom: "5rem" }}
-          initial={{ opacity: 0, y: 20 }}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "1rem",
+            marginBottom: "5rem",
+          }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4, duration: 0.6 }}
+          transition={{ delay: 0.85, duration: 0.5 }}
         >
           <motion.a
             href="#projects"
@@ -178,12 +173,11 @@ export function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           style={{ display: "flex", gap: "3rem", flexWrap: "wrap" }}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.7, duration: 0.6 }}
+          transition={{ delay: 1.05, duration: 0.5 }}
         >
           {[
             { value: "3+", label: "Years Experience" },
@@ -218,7 +212,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Decorative vertical text */}
       <div
         style={{
           position: "absolute",
@@ -243,7 +236,6 @@ export function Hero() {
         </span>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         style={{
           position: "absolute",
@@ -257,7 +249,7 @@ export function Hero() {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 0.6 }}
+        transition={{ delay: 1.4, duration: 0.5 }}
       >
         <span
           style={{
@@ -275,7 +267,8 @@ export function Hero() {
           style={{
             width: "1px",
             height: "32px",
-            background: "linear-gradient(to bottom, rgba(201,169,110,0.5), transparent)",
+            background:
+              "linear-gradient(to bottom, rgba(201,169,110,0.5), transparent)",
           }}
           animate={{ scaleY: [1, 0.5, 1], opacity: [0.5, 1, 0.5] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}

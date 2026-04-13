@@ -1,11 +1,11 @@
 import type { Variants } from "motion/react";
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
   },
 };
 
@@ -56,25 +56,24 @@ export const staggerContainerFast: Variants = {
 };
 
 export const charReveal: Variants = {
-  hidden: { opacity: 0, y: 80, rotateX: -20 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    rotateX: 0,
     transition: {
-      duration: 0.7,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1],
     },
   },
 };
 
 export const wordReveal: Variants = {
-  hidden: { opacity: 0, y: "110%" },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
-    y: "0%",
+    y: 0,
     transition: {
-      duration: 0.65,
+      duration: 0.45,
       ease: [0.22, 1, 0.36, 1],
     },
   },

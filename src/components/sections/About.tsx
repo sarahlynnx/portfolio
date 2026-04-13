@@ -3,7 +3,6 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { RevealText } from "@/components/ui/RevealText";
 import { fadeUp } from "@/lib/motion";
 
 export function About() {
@@ -26,10 +25,11 @@ export function About() {
             gap: "3rem",
           }}
         >
-          {/* Left — statement + body */}
           <div style={{ maxWidth: "680px" }}>
-            <RevealText
-              text="Self-taught, shipping real products for real clients."
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
               style={{
                 fontFamily: "var(--font-serif)",
                 color: "var(--color-text-primary)",
@@ -38,32 +38,47 @@ export function About() {
                 lineHeight: 1.25,
                 marginBottom: "1.5rem",
               }}
-              as="h2"
-            />
+            >
+              No CS degree. No bootcamp. Just shipping real products for real
+              clients.
+            </motion.h2>
 
-            <RevealText
-              text="I started with freeCodeCamp, got my first three certifications, and kept going from there. Three years later I've shipped production apps covering auth, payments, real-time messaging, booking systems with race condition handling, and native mobile. I pick up what a project needs and build it."
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              transition={{ delay: 0.1 }}
               style={{
                 color: "var(--color-text-muted)",
                 fontSize: "1rem",
                 lineHeight: 1.8,
                 marginBottom: "1rem",
               }}
-              delay={0.1}
-            />
+            >
+              I started with freeCodeCamp, got my first three certifications,
+              and kept going from there. Three years later I&apos;ve shipped
+              production apps covering auth, payments, real-time messaging,
+              booking systems with race condition handling, and native mobile. I
+              pick up what a project needs and build it.
+            </motion.p>
 
-            <RevealText
-              text="I started LynnX because I kept seeing small businesses in the area with no website or a bad one. I build what they actually need, handle the hosting, and stick around after launch."
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              transition={{ delay: 0.2 }}
               style={{
                 color: "var(--color-text-muted)",
                 fontSize: "1rem",
                 lineHeight: 1.8,
               }}
-              delay={0.2}
-            />
+            >
+              I started LynnX because I kept seeing small businesses in the area
+              with no website or a bad one. I build what they actually need,
+              handle the hosting, and stick around after launch.
+            </motion.p>
           </div>
 
-          {/* Detail cards */}
           <div
             style={{
               display: "grid",
