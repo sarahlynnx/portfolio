@@ -18,12 +18,12 @@ export const experiences: ExperienceItem[] = [
     url: "https://lynnx.dev",
     badge: "Founder",
     description:
-      "Founded a web design and development company providing custom websites and ongoing maintenance to small businesses in the Seattle/Greater Washington area.",
+      "Started LynnX to build custom websites for small businesses in the Seattle area that either had no online presence or needed something better than what they had.",
     highlights: [
-      "Architected lynnx.dev — a full-stack Next.js 15 / TypeScript / MongoDB platform with user auth, blog CMS (Quill), real-time messaging, client intake workflows, and email outreach system",
-      "Implemented JWT authentication with bcryptjs, protected API routes, and role-based access control",
-      "Engineered SEO infrastructure: Schema.org JSON-LD, Open Graph, canonical URLs, auto-generated sitemaps, and critical CSS inlining",
-      "Integrated Cloudinary, SendGrid, Nodemailer, and Google reCAPTCHA; deployed on Vercel with Analytics and Speed Insights",
+      "Built lynnx.dev from scratch: Next.js 15, TypeScript, MongoDB, with JWT auth, bcryptjs password hashing, a blog with comments and likes, real-time messaging, client intake forms, and an email outreach system",
+      "Locked down all API routes with role-based access control and wrote middleware to enforce CORS, validate request origins, and keep sensitive endpoints inaccessible without auth",
+      "Set up Schema.org JSON-LD (LocalBusiness + WebSite), Open Graph tags, canonical URLs, auto-generated sitemaps, and critical CSS inlining for page load performance",
+      "Wired up Cloudinary for image management, SendGrid and Nodemailer for transactional email, Google reCAPTCHA on contact forms, and deployed to Vercel with Analytics and Speed Insights",
     ],
   },
   {
@@ -32,10 +32,10 @@ export const experiences: ExperienceItem[] = [
     location: "Seattle, WA",
     period: "July 2023 — Present",
     highlights: [
-      "Delivered full-cycle web development for clients — from design through deployment and ongoing hosting — increasing client mobile traffic by 50%",
-      "Established online presence for clients with no prior digital footprint, resulting in 30% more inquiries and 20% more appointments",
-      "Maintained 99.9% uptime across hosted client sites through continuous monitoring and proactive maintenance",
-      "Applied industry security standards across all projects, improving user trust and retention by 40%",
+      "Built Olson Construction's first website from zero; the business went from no online presence to 5-8 inbound email leads per month and 431 Google Business profile views in the first five months",
+      "Handle everything end-to-end for clients: design, development, deployment, DNS, and ongoing hosting and maintenance",
+      "Secured all projects with HTTPS, server-side input validation, regex patterns, env vars for all API keys, and route-level auth checks — never relying solely on client-side validation",
+      "Handled race conditions in booking and payment flows, rate limiting through Supabase, and fallback logic for edge cases across multiple production projects",
     ],
   },
 ];

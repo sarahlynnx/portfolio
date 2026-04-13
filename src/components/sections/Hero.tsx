@@ -113,7 +113,7 @@ export function Hero() {
               maxWidth: "480px",
             }}
           >
-            Self-taught engineer building production-grade web applications.
+            Self-taught engineer building production-grade web and mobile applications.
             Founder of{" "}
             <a
               href="https://lynnx.dev"

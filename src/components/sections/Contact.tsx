@@ -74,7 +74,7 @@ export function Contact() {
             >
               I&apos;m currently available for freelance projects and open to new opportunities.
               Whether you need a full-stack web app, want to discuss a project, or just want to
-              connect — my inbox is open.
+              connect. My inbox is open.
             </p>
 
             {/* Email */}

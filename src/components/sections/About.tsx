@@ -11,7 +11,11 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   return (
-    <section id="about" className="section-padding" style={{ borderTop: "1px solid rgba(201,169,110,0.07)" }}>
+    <section
+      id="about"
+      className="section-padding"
+      style={{ borderTop: "1px solid rgba(201,169,110,0.07)" }}
+    >
       <div className="container-wide" ref={ref}>
         <SectionLabel number="01" label="About" />
 
@@ -25,7 +29,7 @@ export function About() {
           {/* Left — statement + body */}
           <div style={{ maxWidth: "680px" }}>
             <RevealText
-              text="Self-taught. Production-proven. Building real things for real clients."
+              text="Self-taught, shipping real products for real clients."
               style={{
                 fontFamily: "var(--font-serif)",
                 color: "var(--color-text-primary)",
@@ -38,7 +42,7 @@ export function About() {
             />
 
             <RevealText
-              text="With 3+ years of professional experience, I've taken projects from blank repositories to live, revenue-generating products. I'm proficient across the full stack — from REST API design and MongoDB data modeling to payment integrations, authentication systems, and technical SEO."
+              text="I started with freeCodeCamp, got my first three certifications, and kept going from there. Three years later I've shipped production apps covering auth, payments, real-time messaging, booking systems with race condition handling, and native mobile. I pick up what a project needs and build it."
               style={{
                 color: "var(--color-text-muted)",
                 fontSize: "1rem",
@@ -49,7 +53,7 @@ export function About() {
             />
 
             <RevealText
-              text="I founded LynnX to help small businesses in the Seattle area get online and grow. I'm passionate about writing clean, maintainable code and delivering measurable results — not just websites."
+              text="I started LynnX because I kept seeing small businesses in the area with no website or a bad one. I build what they actually need, handle the hosting, and stick around after launch."
               style={{
                 color: "var(--color-text-muted)",
                 fontSize: "1rem",

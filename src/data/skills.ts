@@ -10,11 +10,11 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "Frameworks",
-    skills: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    skills: ["Next.js", "React", "React Native", "Expo", "Node.js", "Tailwind CSS", "NativeWind"],
   },
   {
     label: "Databases",
-    skills: ["MongoDB", "Mongoose ODM", "NoSQL"],
+    skills: ["MongoDB", "Mongoose ODM", "PostgreSQL", "PostGIS", "Supabase", "NoSQL"],
   },
   {
     label: "Auth & Security",
@@ -22,7 +22,11 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "APIs & Services",
-    skills: ["REST APIs", "Stripe", "Razorpay", "Webhooks", "Cron Jobs"],
+    skills: ["REST APIs", "Supabase Realtime", "Stripe", "Razorpay", "Webhooks", "Cron Jobs"],
+  },
+  {
+    label: "Mobile",
+    skills: ["React Native Reanimated 3", "Expo Router", "Expo SDK", "Gesture Handler", "EAS Build"],
   },
   {
     label: "Cloud & DevOps",
