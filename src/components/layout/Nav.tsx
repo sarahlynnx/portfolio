@@ -12,6 +12,8 @@ const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+const RESUME_HREF = "/resume";
+
 export function Nav() {
   const activeSection = useActiveSection();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,7 +74,6 @@ export function Nav() {
           {/* Desktop nav */}
           <ul
             style={{
-              display: "flex",
               alignItems: "center",
               gap: "2rem",
               listStyle: "none",
@@ -118,6 +119,25 @@ export function Nav() {
                 </li>
               );
             })}
+            <li style={{ display: "flex", alignItems: "center" }}>
+              <a
+                href={RESUME_HREF}
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  color: "var(--color-amber)",
+                  fontSize: "0.75rem",
+                  letterSpacing: "0.08em",
+                  textDecoration: "none",
+                  border: "1px solid rgba(201,169,110,0.4)",
+                  padding: "0.35rem 0.85rem",
+                  borderRadius: "2px",
+                  transition: "border-color 0.2s, background 0.2s",
+                  lineHeight: 1,
+                }}
+              >
+                Resume
+              </a>
+            </li>
           </ul>
 
           {/* Mobile hamburger */}
@@ -130,7 +150,6 @@ export function Nav() {
               border: "none",
               cursor: "pointer",
               padding: "8px",
-              display: "flex",
               flexDirection: "column",
               gap: "5px",
             }}
@@ -194,6 +213,29 @@ export function Nav() {
               </a>
             </motion.li>
           ))}
+          <motion.li
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: menuOpen ? 1 : 0, y: menuOpen ? 0 : 20 }}
+            transition={{ delay: menuOpen ? NAV_LINKS.length * 0.07 : 0 }}
+            style={{ marginTop: "1.5rem" }}
+          >
+            <a
+              href={RESUME_HREF}
+              onClick={() => setMenuOpen(false)}
+              style={{
+                fontFamily: "var(--font-mono)",
+                color: "var(--color-amber)",
+                fontSize: "1rem",
+                letterSpacing: "0.08em",
+                textDecoration: "none",
+                border: "1px solid rgba(201,169,110,0.4)",
+                padding: "0.5rem 1.5rem",
+                borderRadius: "2px",
+              }}
+            >
+              Resume
+            </a>
+          </motion.li>
         </ul>
       </motion.div>
     </>

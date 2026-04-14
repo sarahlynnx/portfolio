@@ -39,8 +39,7 @@ export function About() {
                 marginBottom: "1.5rem",
               }}
             >
-              No CS degree. No bootcamp. Just shipping real products for real
-              clients.
+              3 years. Multiple production systems. All self-built.
             </motion.h2>
 
             <motion.p
@@ -55,11 +54,10 @@ export function About() {
                 marginBottom: "1rem",
               }}
             >
-              I started with freeCodeCamp, got my first three certifications,
-              and kept going from there. Three years later I&apos;ve shipped
-              production apps covering auth, payments, real-time messaging,
-              booking systems with race condition handling, and native mobile. I
-              pick up what a project needs and build it.
+              I&apos;ve shipped full products independently: payment systems,
+              booking platforms with race condition handling, real-time
+              messaging, and native mobile apps. I make the architectural calls,
+              write the code, and keep things running after launch.
             </motion.p>
 
             <motion.p
@@ -73,9 +71,10 @@ export function About() {
                 lineHeight: 1.8,
               }}
             >
-              I started LynnX because I kept seeing small businesses in the area
-              with no website or a bad one. I build what they actually need,
-              handle the hosting, and stick around after launch.
+              LynnX is a production platform I designed and run end to end:
+              auth, real-time messaging, a blog CMS, client intake, and an admin
+              dashboard. I built every part of it, made every call, and have
+              been maintaining it in production since.
             </motion.p>
           </div>
 

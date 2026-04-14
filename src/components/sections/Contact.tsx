@@ -225,10 +225,10 @@ export function Contact() {
             >
               {[
                 "Full-stack web applications",
-                "Next.js & React development",
                 "API design & integrations",
-                "Business websites & landing pages",
-                "Performance & SEO optimization",
+                "Database design & data modeling",
+                "Mobile development with React Native & Expo",
+                "Next.js & React development",
               ].map((item) => (
                 <li
                   key={item}

@@ -23,20 +23,34 @@ export function Footer() {
         >
           © 2026 Sarah Olson
         </span>
-        <a
-          href="https://github.com/sarahlynnx"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "var(--font-mono)",
-            color: "var(--color-text-muted)",
-            fontSize: "0.75rem",
-            opacity: 0.6,
-            textDecoration: "none",
-          }}
-        >
-          github.com/sarahlynnx
-        </a>
+        <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+          <a
+            href="/resume"
+            style={{
+              fontFamily: "var(--font-mono)",
+              color: "var(--color-text-muted)",
+              fontSize: "0.75rem",
+              opacity: 0.6,
+              textDecoration: "none",
+            }}
+          >
+            Resume
+          </a>
+          <a
+            href="https://github.com/sarahlynnx"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--font-mono)",
+              color: "var(--color-text-muted)",
+              fontSize: "0.75rem",
+              opacity: 0.6,
+              textDecoration: "none",
+            }}
+          >
+            github.com/sarahlynnx
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -97,20 +97,23 @@ body {
 }
 
 /* ─── Nav responsive ─────────────────────────────── */
-.desktop-nav {
-  display: flex;
-}
-
-.mobile-menu-btn {
-  display: none;
-}
-
-@media (max-width: 768px) {
+@layer utilities {
   .desktop-nav {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
     display: none;
   }
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
   .mobile-menu-btn {
-    display: flex;
+    display: flex !important;
   }
 }
 
