@@ -54,10 +54,10 @@ export function About() {
                 marginBottom: "1rem",
               }}
             >
-              I&apos;ve shipped full products independently: payment systems,
-              booking platforms with race condition handling, real-time
-              messaging, and native mobile apps. I make the architectural calls,
-              write the code, and keep things running after launch.
+              I&apos;ve shipped full products from the ground up: payment
+              systems, booking platforms with race condition handling, real-time
+              messaging, and native mobile apps. From architecture through
+              deployment, and still maintaining them in production.
             </motion.p>
 
             <motion.p
@@ -71,10 +71,10 @@ export function About() {
                 lineHeight: 1.8,
               }}
             >
-              LynnX is a production platform I designed and run end to end:
-              auth, real-time messaging, a blog CMS, client intake, and an admin
-              dashboard. I built every part of it, made every call, and have
-              been maintaining it in production since.
+              My most complex project to date is a full booking and payment
+              platform with real-time availability, conflict detection, a
+              pricing engine, and an admin dashboard, all built for a live
+              business and heading to production.
             </motion.p>
           </div>
 

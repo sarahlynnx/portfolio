@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# tailored resumes/cover letters
+src/app/resume/amazon-*.md
