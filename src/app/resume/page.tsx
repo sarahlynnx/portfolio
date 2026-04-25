@@ -346,12 +346,11 @@ export default function ResumePage() {
         <section className="r-section">
           <h2 className="r-section-title">Summary</h2>
           <p className="r-summary">
-            Full-stack developer with 3+ years of experience building and owning
-            production systems end to end. Comfortable across the stack: API
-            design, database modeling, auth, payment flows, real-time features,
-            and native mobile. I work independently, make architectural
-            decisions, and take projects from zero to shipped. Currently running
-            LynnX, a web development company in Seattle.
+            Full-stack developer with 3+ years building and shipping production
+            systems in Next.js, TypeScript, React Native, and MongoDB. I own
+            projects end to end, from database design and auth to payments and
+            deployment, and I use tools like Claude Code, Cursor, and Copilot
+            daily to ship faster.
           </p>
         </section>
 
@@ -449,16 +448,19 @@ export default function ResumePage() {
         {/* Certifications */}
         <section className="r-section">
           <h2 className="r-section-title">Certifications</h2>
-          {certifications.map((group) => (
-            <div key={group.issuer} className="r-cert-group">
-              <div className="r-cert-issuer">{group.issuer}</div>
-              <ul className="r-cert-list">
-                {group.certs.map((c) => (
-                  <li key={c}>{c}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <p
+            style={{
+              fontSize: "0.82rem",
+              color: "var(--r-muted)",
+              lineHeight: 1.7,
+            }}
+          >
+            {certifications
+              .flatMap((group) =>
+                group.certs.map((c) => `${c} (${group.issuer})`)
+              )
+              .join(" · ")}
+          </p>
         </section>
       </div>
     </div>

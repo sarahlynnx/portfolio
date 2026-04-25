@@ -20,4 +20,8 @@ export const certifications: CertGroup[] = [
     issuer: "Educative.io",
     certs: ["Node.js, Express & MongoDB Development"],
   },
+  {
+    issuer: "AWS Skill Builder",
+    certs: ["AWS Cloud Practitioner Essentials (in progress)"],
+  },
 ];

@@ -27,6 +27,8 @@ export const projects: Project[] = [
       "Razorpay",
       "Tailwind CSS 4",
       "Resend",
+      "Vitest",
+      "GitHub Actions",
       "Vercel",
     ],
     description:
@@ -36,6 +38,7 @@ export const projects: Project[] = [
       "Razorpay payment processing: intent creation, webhook handling, and server-side verification for secure transactions",
       "Admin dashboard for managing bookings, dynamic pricing rules, promotional codes, and court restrictions",
       "Recurring events, group booking validation, automated email confirmations via Resend, and scheduled cron jobs",
+      "Vitest test suite with 49 tests covering booking slot logic, timezone utilities, and the pricing engine; CI/CD pipeline running lint, format, typecheck, and test jobs on every PR via GitHub Actions",
       "8 MongoDB schemas: Booking, CourtRestriction, GroupValidationType, PaymentIntent, PricingRule, Promotion, RecurringEvent, User",
     ],
   },

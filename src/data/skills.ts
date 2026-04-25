@@ -13,6 +13,10 @@ export const skillCategories: SkillCategory[] = [
     skills: ["Next.js", "React", "React Native", "Expo", "Node.js", "Tailwind CSS", "NativeWind"],
   },
   {
+    label: "Testing & Quality",
+    skills: ["Vitest", "Jest", "GitHub Actions CI/CD", "ESLint", "Prettier"],
+  },
+  {
     label: "Databases",
     skills: ["MongoDB", "Mongoose ODM", "PostgreSQL", "PostGIS", "Supabase", "NoSQL"],
   },
@@ -30,7 +34,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "Cloud & DevOps",
-    skills: ["Vercel", "Cloudinary", "Git", "GitHub", "Docker"],
+    skills: ["AWS", "Vercel", "Cloudinary", "Git", "GitHub", "Docker"],
   },
   {
     label: "Email",
@@ -45,5 +49,9 @@ export const skillCategories: SkillCategory[] = [
       "Core Web Vitals",
       "Sitemaps",
     ],
+  },
+  {
+    label: "AI & LLM",
+    skills: ["Claude Code", "Cursor", "GitHub Copilot", "Prompt Engineering"],
   },
 ];

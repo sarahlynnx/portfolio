@@ -104,7 +104,9 @@ export function Hero() {
               maxWidth: "480px",
             }}
           >
-            Self-taught engineer who owns systems end to end, from API design to production. Founder of{" "}
+            Full-stack engineer shipping production systems end to end,
+            from API design and auth to payments and real-time features.
+            Founder of{" "}
             <a
               href="https://lynnx.dev"
               target="_blank"
