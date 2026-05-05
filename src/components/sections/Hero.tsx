@@ -181,7 +181,7 @@ export function Hero() {
           transition={{ delay: 1.05, duration: 0.5 }}
         >
           {[
-            { value: "3+", label: "Years Experience" },
+            { value: "3", label: "Years Experience" },
             { value: "10+", label: "Projects Shipped" },
             { value: "99.9%", label: "Uptime SLA" },
           ].map(({ value, label }) => (

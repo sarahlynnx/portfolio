@@ -6,52 +6,30 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Languages",
-    skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+    skills: ["TypeScript", "JavaScript", "Python", "HTML", "CSS", "SQL"],
   },
   {
     label: "Frameworks",
-    skills: ["Next.js", "React", "React Native", "Expo", "Node.js", "Tailwind CSS", "NativeWind"],
-  },
-  {
-    label: "Testing & Quality",
-    skills: ["Vitest", "Jest", "GitHub Actions CI/CD", "ESLint", "Prettier"],
+    skills: ["React", "Next.js", "React Native", "Node.js", "Express", "Tailwind CSS"],
   },
   {
     label: "Databases",
-    skills: ["MongoDB", "Mongoose ODM", "PostgreSQL", "PostGIS", "Supabase", "NoSQL"],
-  },
-  {
-    label: "Auth & Security",
-    skills: ["JWT", "bcryptjs", "NextAuth (Auth.js)", "RBAC", "reCAPTCHA"],
-  },
-  {
-    label: "APIs & Services",
-    skills: ["REST APIs", "Supabase Realtime", "Stripe", "Razorpay", "Webhooks", "Cron Jobs"],
-  },
-  {
-    label: "Mobile",
-    skills: ["React Native Reanimated 3", "Expo Router", "Expo SDK", "Gesture Handler", "EAS Build"],
+    skills: ["PostgreSQL", "MongoDB", "Supabase", "Mongoose"],
   },
   {
     label: "Cloud & DevOps",
-    skills: ["AWS", "Vercel", "Cloudinary", "Git", "GitHub", "Docker"],
+    skills: ["AWS", "Vercel", "Docker", "Git", "GitHub Actions CI/CD"],
   },
   {
-    label: "Email",
-    skills: ["SendGrid", "Nodemailer", "Resend"],
+    label: "Testing",
+    skills: ["Jest", "Vitest"],
   },
   {
-    label: "SEO & Analytics",
-    skills: [
-      "Schema.org JSON-LD",
-      "Open Graph",
-      "Google Analytics",
-      "Core Web Vitals",
-      "Sitemaps",
-    ],
+    label: "APIs & Auth",
+    skills: ["REST APIs", "JWT", "OAuth", "Stripe", "Razorpay"],
   },
   {
-    label: "AI & LLM",
-    skills: ["Claude Code", "Cursor", "GitHub Copilot", "Prompt Engineering"],
+    label: "AI Integration",
+    skills: ["Anthropic SDK (Claude)"],
   },
 ];

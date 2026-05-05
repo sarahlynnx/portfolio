@@ -12,8 +12,8 @@ export function Projects() {
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 480px), 1fr))",
+            display: "flex",
+            flexDirection: "column",
             gap: "1.5rem",
           }}
         >

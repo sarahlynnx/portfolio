@@ -22,6 +22,6 @@ export const certifications: CertGroup[] = [
   },
   {
     issuer: "AWS Skill Builder",
-    certs: ["AWS Cloud Practitioner Essentials (in progress)"],
+    certs: ["AWS Cloud Practitioner Essentials"],
   },
 ];

@@ -11,23 +11,22 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
-    role: "Founder & Lead Developer",
+    role: "Full-Stack Developer",
     company: "LynnX",
     location: "Seattle, WA",
-    period: "Mid 2025 - Present",
+    period: "July 2025 - Present",
     url: "https://lynnx.dev",
-    badge: "Founder",
     highlights: [
-      "Built lynnx.dev from scratch: Next.js 15, TypeScript, MongoDB, with JWT auth, bcryptjs password hashing, a blog with comments and likes, real-time messaging, client intake forms, and an email outreach system",
-      "Locked down all API routes with role-based access control and wrote middleware to enforce CORS, validate request origins, and keep sensitive endpoints inaccessible without auth",
-      "Set up Schema.org JSON-LD (LocalBusiness + WebSite), Open Graph tags, canonical URLs, auto-generated sitemaps, and critical CSS inlining for page load performance",
-      "Wired up Cloudinary for image management, SendGrid and Nodemailer for transactional email, Google reCAPTCHA on contact forms, and deployed to Vercel with Analytics and Speed Insights",
-      "Ship ~40% faster by pairing with Claude Code and Cursor for scaffolding, test generation, and refactors while owning all architectural decisions",
+      "Build and ship full-stack production applications end to end, covering database design, API development, authentication, payments, and deployment, while choosing the right tools for each project's needs",
+      "Design responsive, accessible user interfaces in React and Next.js with TypeScript, optimizing for Core Web Vitals, mobile-first layouts, and consistent cross-browser behavior",
+      "Implement secure server-side logic including JWT and OAuth authentication, role-based access control, server-side input validation, and protection against common OWASP vulnerabilities",
+      "Integrate third-party services including Stripe and Razorpay for payments, Cloudinary for media, Resend for transactional email, and the Anthropic SDK for AI-assisted features",
+      "Maintain code quality through CI/CD pipelines (GitHub Actions), automated test suites in Vitest and Jest, ESLint and Prettier enforcement, and code reviews on every change",
     ],
   },
   {
-    role: "Freelance Web Developer",
-    company: "Self-Employed",
+    role: "Full-Stack Developer",
+    company: "Freelance",
     location: "Seattle, WA",
     period: "July 2023 - Present",
     highlights: [

@@ -88,14 +88,14 @@ export function About() {
             {[
               {
                 label: "Currently",
-                value: "Founder & Lead Developer at LynnX",
+                value: "Full-Stack Developer at LynnX",
                 sublabel: "lynnx.dev",
                 sublink: "https://lynnx.dev",
               },
               {
                 label: "Location",
                 value: "Seattle, WA",
-                sublabel: "Open to remote",
+                sublabel: "Open to in-person or remote",
               },
               {
                 label: "Focus",

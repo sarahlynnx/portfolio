@@ -4,6 +4,7 @@ import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { certifications } from "@/data/certifications";
 import { skillCategories } from "@/data/skills";
+import { education } from "@/data/education";
 import { PrintButton } from "./PrintButton";
 
 export const metadata: Metadata = {
@@ -46,7 +47,26 @@ export default function ResumePage() {
 
         @media print {
           .resume-actions { display: none; }
-          .resume-root { padding: 0; }
+          .resume-root {
+            padding: 0;
+            font-family: Calibri, Arial, sans-serif;
+            color: #000;
+            background: #fff;
+          }
+          .resume-root * {
+            font-family: Calibri, Arial, sans-serif !important;
+            color: #000 !important;
+          }
+          .r-section-title {
+            color: #000 !important;
+            font-weight: 700 !important;
+            font-size: 0.85rem !important;
+            letter-spacing: 0.1em !important;
+          }
+          .r-name { color: #000 !important; }
+          .r-bullets li::before,
+          .r-cert-list li::before { color: #000 !important; }
+          a { color: #000 !important; text-decoration: underline !important; }
         }
 
         /* Header */
@@ -136,6 +156,43 @@ export default function ResumePage() {
         .r-skill-value {
           color: var(--r-text);
           line-height: 1.5;
+        }
+
+        /* Education */
+        .r-edu {
+          margin-bottom: 0.75rem;
+        }
+
+        .r-edu:last-child {
+          margin-bottom: 0;
+        }
+
+        .r-edu-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          gap: 1rem;
+          flex-wrap: wrap;
+          margin-bottom: 0.15rem;
+        }
+
+        .r-edu-school {
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: var(--r-text);
+        }
+
+        .r-edu-period {
+          font-family: var(--font-geist-mono), monospace;
+          font-size: 0.72rem;
+          color: var(--r-muted);
+          white-space: nowrap;
+        }
+
+        .r-edu-meta {
+          font-size: 0.8rem;
+          color: var(--r-muted);
+          line-height: 1.6;
         }
 
         /* Experience */
@@ -326,18 +383,18 @@ export default function ResumePage() {
             <span>701.331.4416</span>
             <a href="mailto:saraholsonx@gmail.com">saraholsonx@gmail.com</a>
             <a
-              href="https://lynnx.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              lynnx.dev
-            </a>
-            <a
               href="https://github.com/sarahlynnx"
               target="_blank"
               rel="noopener noreferrer"
             >
               github.com/sarahlynnx
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sarahlynnx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/sarahlynnx
             </a>
           </div>
         </header>
@@ -346,11 +403,11 @@ export default function ResumePage() {
         <section className="r-section">
           <h2 className="r-section-title">Summary</h2>
           <p className="r-summary">
-            Full-stack developer with 3+ years building and shipping production
-            systems in Next.js, TypeScript, React Native, and MongoDB. I own
-            projects end to end, from database design and auth to payments and
-            deployment, and I use tools like Claude Code, Cursor, and Copilot
-            daily to ship faster.
+            Full-stack developer with 3 years shipping production systems end to
+            end, from database design and authentication to payment systems and
+            deployment. Comfortable across web and mobile, with experience
+            writing tested code, securing API routes, and handling concurrent
+            database access in real-world workloads.
           </p>
         </section>
 
@@ -365,6 +422,23 @@ export default function ResumePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Education */}
+        <section className="r-section">
+          <h2 className="r-section-title">Education</h2>
+          {education.map((edu) => (
+            <div key={edu.school} className="r-edu">
+              <div className="r-edu-header">
+                <span className="r-edu-school">{edu.school}</span>
+                <span className="r-edu-period">{edu.period}</span>
+              </div>
+              <div className="r-edu-meta">
+                {edu.location}
+                {edu.details ? ` · ${edu.details}` : ""}
+              </div>
+            </div>
+          ))}
         </section>
 
         {/* Experience */}
@@ -441,6 +515,11 @@ export default function ResumePage() {
               <div className="r-project-sub">{p.subtitle}</div>
               <div className="r-project-tech">{p.technologies.join(" · ")}</div>
               <p className="r-project-desc">{p.description}</p>
+              <ul className="r-bullets">
+                {p.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </section>

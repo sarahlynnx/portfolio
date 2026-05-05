@@ -206,7 +206,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             }}
             whileHover={{ x: 2 }}
           >
-            {project.status === "Live" ? "Visit Site" : "Coming Soon"}
+            Visit Site
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
               <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

@@ -1,9 +1,8 @@
-"use client";
-
 export function PrintButton() {
   return (
-    <button
-      onClick={() => window.print()}
+    <a
+      href="/api/resume"
+      download="sarah-olson-resume.pdf"
       style={{
         fontSize: "0.8rem",
         fontFamily: "var(--font-geist-mono), monospace",
@@ -13,9 +12,12 @@ export function PrintButton() {
         padding: "0.4rem 0.9rem",
         border: "1px solid #7a5c2e",
         borderRadius: "2px",
+        textDecoration: "none",
+        display: "inline-block",
+        lineHeight: 1.2,
       }}
     >
-      Print / Save PDF
-    </button>
+      Download PDF
+    </a>
   );
 }
