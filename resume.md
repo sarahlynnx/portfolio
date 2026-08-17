@@ -1,92 +1,84 @@
 # SARAH OLSON
-**Software Developer**
-Seattle, WA | 701.331.4416 | saraholsonx@gmail.com
-lynnx.dev | github.com/sarahlynnx
+
+**Full-Stack Software Developer**
+Seattle, WA | 701.331.4416 | saraholsonx@gmail.com | lynnx.dev | github.com/sarahlynnx | linkedin.com/in/sarahlynnx
 
 ---
 
-## PROFESSIONAL SUMMARY
+## SUMMARY
 
-Self-taught full-stack developer with 3+ years of professional experience building and shipping production web applications for real clients. Proficient in React, Next.js, and TypeScript with hands-on experience across the full stack — from REST API design and MongoDB data modeling to payment integrations, authentication systems, and SEO optimization. Founded and operate LynnX, a web development company serving small businesses in the Seattle area. Passionate about writing clean, maintainable code and delivering measurable results for clients.
+Full-stack software developer with 3 years of experience shipping production systems end to end — object data modeling, API design, security, and deployment — built to the standards of real business scale and sustainability. Experienced building multi-platform applications across web and mobile that adapt as the business changes, and choreographing agentic AI workflows with managed memory, deterministic pipelines, and session-agnostic context.
 
 ---
 
 ## TECHNICAL SKILLS
 
-| Category | Skills |
-|---|---|
-| Languages | JavaScript (ES6+), TypeScript, HTML5, CSS3 |
-| Frameworks | React, Next.js, Node.js, Tailwind CSS |
-| Databases | MongoDB, Mongoose ODM, NoSQL data modeling |
-| Authentication | JWT, bcryptjs, NextAuth (Auth.js), role-based access control |
-| APIs & Services | REST APIs, Stripe, Razorpay, Webhooks, Cron jobs |
-| Cloud & DevOps | Vercel, Cloudinary, Git, GitHub, Docker |
-| Email | SendGrid, Nodemailer, Resend |
-| SEO & Analytics | Schema.org (JSON-LD), Open Graph, Google Analytics, Sitemap generation, Core Web Vitals optimization |
-| Tools | Postman, VS Code, npm |
+| Category              | Skills                                                       |
+| --------------------- | ------------------------------------------------------------ |
+| Languages             | TypeScript, JavaScript, Python, SQL, HTML, CSS               |
+| Frameworks            | React, Next.js, React Native, Node.js, Express, Tailwind CSS |
+| Databases             | MongoDB, Mongoose, PostgreSQL, PostGIS, Supabase             |
+| Cloud & DevOps        | AWS, Vercel, Docker, Git, GitHub Actions CI/CD               |
+| APIs & Auth           | REST APIs, JWT, OAuth, NextAuth, webhooks, Stripe, Razorpay  |
+| Testing               | Jest, Vitest                                                 |
+| Agentic AI frameworks | Anthropic SDK (Claude), Mnemosyme, Hermes agents             |
 
 ---
 
-## PROFESSIONAL EXPERIENCE
+## EXPERIENCE
 
-### Founder & Lead Developer
-**LynnX | Seattle, WA | Mid 2025 – Present**
-lynnx.dev
+### Full-Stack Developer
 
-Founded a web design and development company providing custom websites and ongoing maintenance to small businesses in the Seattle/Greater Washington area.
+**Lynnx | Seattle, WA | July 2025 – Present**
 
-- Architected and built lynnx.dev — a full-stack Next.js 15 / TypeScript / MongoDB platform featuring user authentication, a blog CMS with rich text editing (Quill), commenting system, real-time messaging, client intake workflows, and an email outreach system
-- Implemented JWT-based authentication with bcryptjs password hashing, protected API routes, and role-based access control across the platform
-- Engineered SEO infrastructure including Schema.org structured data (LocalBusiness + WebSite JSON-LD), Open Graph / Twitter Card metadata, canonical URLs, auto-generated sitemaps, and critical CSS inlining — improving page load performance and search visibility
-- Integrated Cloudinary for image upload and management, SendGrid and Nodemailer for transactional email, and Google reCAPTCHA for form security
-- Deployed on Vercel with Vercel Analytics and Speed Insights for real-time performance monitoring
-
-### Freelance Web Developer
-**Self-Employed | Seattle, WA | July 2023 – Present**
-
-- Delivered full-cycle web development for clients — from design through deployment and ongoing hosting — increasing client mobile traffic by 50% through responsive design and cross-browser compatibility
-- Established online presence for clients with no prior digital footprint, resulting in 30% more inquiries and 20% more appointments
-- Maintained 99.9% uptime across hosted client sites through continuous monitoring and proactive maintenance
-- Applied industry security standards across all projects, improving user trust and retention by 40%
+- Ship full-stack production applications end to end — data modeling through API design, payments, security, and deployment — designing each system around the client's business model instead of a template
+- Architect config-driven platforms so clients can adjust pricing, services, and business rules themselves, letting the product scale with demand and absorb business changes without a developer in the loop
+- Deliver systems built for concurrent, transactional workloads: multi-user booking platforms, e-commerce with live inventory and checkout, cross-platform integrations, ETL pipelines, and SEO-optimized marketing sites
+- Secure every deployment with OAuth and JWT authentication, role-based access control, server-side validation, and API rate limiting, guarding against common OWASP vulnerabilities
+- Apply AI strategically to client work — automating SDLC workflows with shared context across projects and pairing them with CI/CD and automated test suites for faster, more reliable delivery — while communicating the value, limits, and ethical use of AI to stakeholders
 
 ---
 
 ## PROJECTS
 
 ### PlayFlex — Court Booking & Management Platform
-**playflex.in (pending launch) | Early 2026**
-Technologies: Next.js 16, React 19, TypeScript, MongoDB, Mongoose, NextAuth, Razorpay, Tailwind CSS 4, Resend, Vercel
 
-Built a production-grade full-stack booking platform for a pickleball courts business in India — replacing all manual and third-party booking processes with a custom system.
+**playflex.vercel.app | Beta — Live on Vercel | March 2026**
+Technologies: Next.js, React, TypeScript, MongoDB, Mongoose, NextAuth, Razorpay, Tailwind CSS, Resend, Vitest, Vercel
 
-- Designed and implemented end-to-end online court reservations with real-time availability checking, time slot conflict detection, and date-based scheduling
-- Integrated Razorpay payment processing: payment intent creation, webhook handling, and server-side payment verification for secure transaction management
-- Built admin dashboard enabling business owners to manage bookings, configure dynamic pricing rules, create promotional codes, and control court restrictions
-- Implemented NextAuth authentication, recurring events system, group booking validation, automated email confirmations and cancellations via Resend, and scheduled cron jobs for automated maintenance tasks
-- Modeled 8 MongoDB schemas: Booking, CourtRestriction, GroupValidationType, PaymentIntent, PricingRule, Promotion, RecurringEvent, User
+Booking and revenue platform for a pickleball courts business, replacing third-party marketplaces so the owner keeps both the commissions and the customer data. Dynamic pricing and promotions drive demand into off-peak hours, and the configuration layer lets the business add sports, courts, and rules without a developer.
 
-### Olson Construction & Concrete — Business Website
-**olsonbuilds.com | Live | End of 2024**
-Technologies: Next.js, TypeScript, Tailwind CSS, Nodemailer, Vercel
+Technical highlights: Time-series NoSQL data model for availability and slot-conflict detection under concurrent booking; four third-party booking integrations reconciled into a single real-time availability view; payment intent flow with webhook verification and server-side confirmation; scheduled jobs for recurring events and automated notifications.
 
-Designed and developed a complete multi-page business website for a construction company in North Dakota that had zero prior online presence.
+### LynnX — Web Design & Development Platform
 
-- Built multi-page site (home, about, services, careers, contact) from scratch, giving the business its first-ever digital presence
-- Developed a job application/careers system with server-side form handling and automated email notifications via Nodemailer
-- Created a custom image optimization pipeline (Node.js script) to process and convert assets for web performance
-- Implemented SEO metadata, Open Graph tags, auto-generated sitemaps, and fully responsive design across all device sizes
+**lynnx.dev | Live | July 2025**
+Technologies: Next.js, TypeScript, MongoDB, Mongoose, JWT, Anthropic SDK (Claude), Quill, Cloudinary, Resend, Vercel
+
+The company site for LynnX, built to actually run the business: client intake, two-way project messaging, an AI-assisted blog, and an admin dashboard with AI-assisted email outreach — a full client-engagement platform in one application.
+
+Technical highlights: human-in-the-loop AI content pipeline via the Anthropic SDK, gated by role-based entitlements and JWT authentication; multi-user sender/receiver messaging; server-side rendering for search visibility and fast first loads.
+
+### Social Snout — Location-Based Social App for Pets
+
+**Portfolio Project | April 2026**
+Technologies: React Native, Expo, TypeScript, Supabase, PostgreSQL, PostGIS, Supabase Realtime, React Native Reanimated, Expo Router, NativeWind, Jest
+
+Mobile app for pets and their people: location-based discovery, swipe-to-match, realtime chat, and a neighborhood social feed, built entirely on Supabase with no separate backend service.
+
+Technical highlights: indexed PostGIS geospatial search that scales with data volume while keeping raw location data server-side; atomic, idempotent database transactions that hold correctness under concurrency and network failure; data-level access control; native-thread animations using Reanimated 3 worklets.
 
 ---
 
 ## CERTIFICATIONS
 
-**freeCodeCamp**
-- JavaScript Algorithms & Data Structures
-- Front End Development Libraries
-- Responsive Web Design
+- **freeCodeCamp** — JavaScript Algorithms & Data Structures, Front End Development Libraries, Responsive Web Design
+- **MongoDB University** — MongoDB Node.js Developer Path
+- **Educative.io** — Node.js, Express & MongoDB Development
+- **AWS Skill Builder** — AWS Cloud Practitioner Essentials
 
-**MongoDB University**
-- MongoDB Node.js Developer Path
+---
 
-**Educative.io**
-- Node.js, Express & MongoDB Development
+## EDUCATION
+
+**Northland Technical College | East Grand Forks, MN** — January 2015 – December 2017
