@@ -21,15 +21,15 @@ Full-stack software developer with 3 years of experience shipping production sys
 | Cloud & DevOps        | AWS, Vercel, Docker, Git, GitHub Actions CI/CD               |
 | APIs & Auth           | REST APIs, JWT, OAuth, NextAuth, webhooks, Stripe, Razorpay  |
 | Testing               | Jest, Vitest                                                 |
-| Agentic AI frameworks | Anthropic SDK (Claude), Mnemosyme, Hermes agents             |
+| Agentic AI frameworks | Anthropic SDK (Claude), Mnemosyne, Hermes agents             |
 
 ---
 
 ## EXPERIENCE
 
-### Full-Stack Developer
+### Freelancer & Full-Stack Developer
 
-**Lynnx | Seattle, WA | July 2025 – Present**
+**Lynnx - Independent Web Consultancy | Seattle, WA | July 2023 – Present**
 
 - Ship full-stack production applications end to end — data modeling through API design, payments, security, and deployment — designing each system around the client's business model instead of a template
 - Architect config-driven platforms so clients can adjust pricing, services, and business rules themselves, letting the product scale with demand and absorb business changes without a developer in the loop
@@ -67,15 +67,6 @@ Technologies: React Native, Expo, TypeScript, Supabase, PostgreSQL, PostGIS, Sup
 Mobile app for pets and their people: location-based discovery, swipe-to-match, realtime chat, and a neighborhood social feed, built entirely on Supabase with no separate backend service.
 
 Technical highlights: indexed PostGIS geospatial search that scales with data volume while keeping raw location data server-side; atomic, idempotent database transactions that hold correctness under concurrency and network failure; data-level access control; native-thread animations using Reanimated 3 worklets.
-
----
-
-## CERTIFICATIONS
-
-- **freeCodeCamp** — JavaScript Algorithms & Data Structures, Front End Development Libraries, Responsive Web Design
-- **MongoDB University** — MongoDB Node.js Developer Path
-- **Educative.io** — Node.js, Express & MongoDB Development
-- **AWS Skill Builder** — AWS Cloud Practitioner Essentials
 
 ---
 
