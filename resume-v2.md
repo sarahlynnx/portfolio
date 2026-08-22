@@ -82,11 +82,11 @@ The company site, built to actually run the business: client intake, two-way pro
 - **freeCodeCamp** — JavaScript Algorithms & Data Structures, Front End Development Libraries, Responsive Web Design
 - **MongoDB University** — MongoDB Node.js Developer Path
 - **Educative.io** — Node.js, Express & MongoDB Development
-- **AWS Skill Builder** — AWS Cloud Practitioner Essentials (coursework)
+- **AWS Skill Builder** — AWS Cloud Practitioner Essentials
 
 ---
 
 ## EDUCATION
 
-**Northland Technical College | East Grand Forks, MN**
-[DEGREE OR DIPLOMA, FIELD OF STUDY] | January 2015 – December 2017
+**Northland Community & Technical College | East Grand Forks, MN**
+Associate, Applied Sciences | January 2015 – December 2017

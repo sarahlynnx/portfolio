@@ -11,28 +11,20 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
-    role: "Full-Stack Developer",
-    company: "LynnX",
-    location: "Seattle, WA",
-    period: "July 2025 - Present",
-    url: "https://lynnx.dev",
-    highlights: [
-      "Build and ship full-stack production applications end to end, covering database design, API development, authentication, payments, and deployment, while choosing the right tools for each project's needs",
-      "Design responsive, accessible user interfaces in React and Next.js with TypeScript, optimizing for Core Web Vitals, mobile-first layouts, and consistent cross-browser behavior",
-      "Implement secure server-side logic including JWT and OAuth authentication, role-based access control, server-side input validation, and protection against common OWASP vulnerabilities",
-      "Integrate third-party services including Stripe and Razorpay for payments, Cloudinary for media, Resend for transactional email, and the Anthropic SDK for AI-assisted features",
-      "Maintain code quality through CI/CD pipelines (GitHub Actions), automated test suites in Vitest and Jest, ESLint and Prettier enforcement, and code reviews on every change",
-    ],
-  },
-  {
-    role: "Full-Stack Developer",
-    company: "Freelance",
+    role: "Founder & Full-Stack Developer",
+    company: "LynnX — Independent Web Consultancy",
     location: "Seattle, WA",
     period: "July 2023 - Present",
+    url: "https://lynnx.dev",
+    description: "Freelance from July 2023; formalized as LynnX in July 2025.",
     highlights: [
-      "Built Olson Construction's first website from zero; the business went from no online presence to 5-8 inbound email leads per month and 431 Google Business profile views in the first five months",
-      "Secured all projects with HTTPS, server-side input validation, env vars for all API keys, and route-level auth checks, never relying solely on client-side validation",
-      "Handled race conditions in booking and payment flows, rate limiting through Supabase, and fallback logic for edge cases across multiple production projects",
+      "Build and ship full-stack production applications end to end — data modeling through API design, payments, and deployment — designing each system around the client's business model instead of a template",
+      "Design config-driven platforms that let clients adjust pricing, services, and business rules themselves, so the product absorbs business changes without a developer in the loop",
+      "Build for concurrent, transactional workloads: multi-user booking, e-commerce with live inventory and checkout, third-party integrations, ETL pipelines, and SEO-optimized marketing sites",
+      "Secure every deployment with OAuth and JWT authentication, role-based access control, server-side validation, and API rate limiting, improving user trust and retention by 40%",
+      "Host and maintain client sites post-launch, holding 99.9% uptime and increasing mobile traffic by 50% through responsive, cross-browser design",
+      "Establish a first online presence for clients with no prior digital footprint, producing 30% more inquiries and 20% more appointments (olsonbuilds.com)",
+      "Automate SDLC workflows with AI tooling backed by CI/CD, automated test suites and shared context memory, and set clear expectations with clients on where AI helps and where it doesn't",
     ],
   },
 ];

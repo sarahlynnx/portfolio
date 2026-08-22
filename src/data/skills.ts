@@ -18,7 +18,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "Cloud & DevOps",
-    skills: ["AWS", "Vercel", "Docker", "Git", "GitHub Actions CI/CD"],
+    skills: ["Vercel", "Docker", "Git", "GitHub Actions CI/CD"],
   },
   {
     label: "Testing",

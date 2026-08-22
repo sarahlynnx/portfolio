@@ -72,4 +72,5 @@ Technical highlights: indexed PostGIS geospatial search that scales with data vo
 
 ## EDUCATION
 
-**Northland Technical College | East Grand Forks, MN** — January 2015 – December 2017
+**Northland Community & Technical College | East Grand Forks, MN**
+Associate, Applied Sciences | January 2015 – December 2017
