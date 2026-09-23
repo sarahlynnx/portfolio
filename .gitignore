@@ -42,3 +42,4 @@ next-env.d.ts
 
 # tailored resumes/cover letters
 src/app/resume/amazon-*.md
+.playwright-mcp/

@@ -129,7 +129,7 @@ function Bullet({ children }: { children: string }) {
 export function ResumeDocument() {
   return (
     <Document
-      title="Sarah Olson — Resume"
+      title="Sarah Olson Resume"
       author="Sarah Olson"
       subject="Full-Stack Developer Resume"
     >
@@ -201,7 +201,7 @@ export function ResumeDocument() {
             <View key={exp.company + exp.role} style={styles.entry} wrap={false}>
               <View style={styles.entryHeader}>
                 <Text style={styles.entryTitle}>
-                  {exp.role} — {exp.company}
+                  {exp.role} | {exp.company}
                 </Text>
                 <Text style={styles.entryPeriod}>{exp.period}</Text>
               </View>
@@ -223,7 +223,7 @@ export function ResumeDocument() {
             <View key={p.title} style={styles.entry} wrap={false}>
               <View style={styles.entryHeader}>
                 <Text style={styles.entryTitle}>
-                  {p.title} — {p.subtitle}
+                  {p.title}: {p.subtitle}
                 </Text>
                 <Text style={styles.entryPeriod}>
                   {p.status} · {p.period}

@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: "PlayFlex",
     subtitle: "Court Booking & Management Platform",
-    status: "Beta — Live on Vercel",
+    status: "Beta, Live on Vercel",
     period: "March 2026",
     url: "https://playflex.vercel.app",
     technologies: [
